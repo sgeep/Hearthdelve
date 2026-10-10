@@ -70,4 +70,4 @@ The owner's sign-off on Checkpoint B closes 5a (no build, no playtest; the "play
 
 ## 8. Gate
 
-Checkpoint A: `docs/STORY_5A_SPINE.md` (2026-10-09). Two stops: after Checkpoint A (the owner chooses the spine) and after Checkpoint B (the owner signs off the story bible and the GDD changes). The playtest's feedback (`docs/PLAYTEST_4I.md`) doesn't bind 5a, but anything a tester says about the story, the cast or the tone is read in at Checkpoint B.
+Checkpoint A: `docs/STORY_5A_SPINE.md` (2026-10-09); **the owner chose on 2026-10-10** (direction A with A2, and the eleven choices: its §5). Two stops: after Checkpoint A (the owner chooses the spine) and after Checkpoint B (the owner signs off the story bible and the GDD changes). The playtest's feedback (`docs/PLAYTEST_4I.md`) doesn't bind 5a, but anything a tester says about the story, the cast or the tone is read in at Checkpoint B.

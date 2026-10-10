@@ -80,3 +80,20 @@ The owner's two campaigns are the source (kept outside the repo): the earlier on
 ## 4. What happens next
 
 The owner picks a direction (or a mix) and answers whichever choices they're ready to; anything left open stays open and unimplied. Checkpoint B then writes the story bible (`docs/STORY.md`) on that spine: Acts II–IV beat by beat, the cast's arcs, GDD §2.9's twelve conflicts resolved, and the Phase 5 mapping, with the GDD changes proposed as a diff.
+
+## 5. The owner's choices (2026-10-10)
+
+Checkpoint A closed. Canon from here (written into the GDD only with Checkpoint B's sign-off):
+
+- **Direction: A, The Old Party, with A2.** The Warden Below is what Karias became inside the seal; Glimmer is a fey spirit he called into it, who slipped out into the infant Ogrin.
+- **1. Ogrin's origin: (a), as locked.** Found as an infant in the Hollows beside two dead adults; no birth name to find.
+- **2. Bart: (b), one of the Fortunate Five.** He came with them and stayed when they split; Musashi doesn't name him because Bart asked. (His age, and whether he's drawn old, is proposed in Checkpoint B; the fifth member stays open.)
+- **3. Kaloren: (a).** The lich as built, unconnected to the Five's history.
+- **4. The source: (c).** A wound, sealed by a structure Karias built to hold it, which became the prison-like deep.
+- **5. The sealers' lives are bound to the seal: (a).** Maximo, Gimp and Boog stopped ageing while it holds, and none of them can go far below without loosening it.
+- **6. Why Gimp hates Maximo: (c).** The war's darkness got into Gimp and he turned on his party; Maximo handed him over to be judged, so Gimp missed Karias's end (the grudge he admits); and he blames Maximo for letting Karias go into the seal (the wound under it).
+- **7. Grim is Kariaston's grower** and the garden's mentor.
+- **8. Maximo's creed** is Kariaston's founding principle: *look to others as allies; do not judge a book by its cover; save as many as you can.*
+- **9. Phi's son** comes looking for his mother as a Visitor (the Inn).
+- **10. Phi's hammer** (not a spear): broken by [the betrayer], found by the keeper on a later floor and brought home; Glimmer makes it her new anchor so Ogrin can live without her.
+- **11. Karias was a half-elf.**
