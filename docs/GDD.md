@@ -1186,6 +1186,8 @@ Two full games in one is ambitious, especially for a small team. Recommended gua
 75. **The twelve v0.5 story conflicts** (Section 2.9) are resolved: no refugees on a wall, no fortification, no war footing; Ser Aldric, Sylvaris and Grukka arrive as people who stay; canonical late arrivals never take the three plots; the surface feels the Hollows only as personal strange events.
 76. **Morale's story purpose**: the village's bond, which renews the seal (Section 6.4); how it's computed is its milestone's.
 
+77. **After the story's sign-off** *(the owner, 2026-10-10)*: the fifth of the Fortunate Five is **Kresch**, a human fighter, very close to Grim, who has died since; **Maximo can't say** who gave him his creed; **Toshi**, when found, has found Musashi's taste; **Kaloren's phylactery** is won from one of the endgame bosses, and that night Kaloren is waiting in the keeper's room; **firearms** are very rare but not unheard of, and Gimp or Boog may part with one as a weapon for the keeper at some point (superseding Open 12's "never a player weapon"). Still open: Phi's son's name, Phi's ending, the Fungal Warrens' and Ember Forge's bosses. *Pending:* the owner's "Karias is both the Warden and the betrayer" (`docs/STORY.md` §7).
+
 *Recorded 2026-10-06 (the owner's approval of the 4h plan and its canon):*
 
 64. **This is a community** *(4h Checkpoint D, 2026-10-07; approved 2026-10-08, with 4h)*: **Gimp's first meeting is in the keeper's bedroom** (the owner's revision): the first morning after a delve of the keeper's own, he climbs out of the hatch in the floor, as he has for years by an arrangement with Phi (up her hatch to see Boog and have a drink, back down), asks where she is, is irritated nobody told him she's gone, and goes back down; once per save. Afterwards he comes up to see Boog now and then (seeded, irregular, never two days running), by the stairs from the hatch. He **openly detests Maximo** and won't say why (open question, Section 13). The village's people talk among themselves in short overheard exchanges (a few pairs, once a day each, a quiet between any two); familiar villagers come to dinner (none to two an evening, as ordinary customers in their own looks); a small pale light hovers at Ogrin's window on some evenings, unexplained. Gimp's look: `soldier_headband` with a backpack; his portrait the Portrait Generator's elf with a red headband.
@@ -1297,10 +1299,10 @@ Two full games in one is ambitious, especially for a small team. Recommended gua
     - ~~when Kariaston got its name; how long ago the sealing was, and Maximo's age; Karias elf or half-elf; Kaloren's secret; Glimmer and the Warden; Glimmer's questline~~ (answered 2026-10-10, Decided 65–76); still open: who else knows Kaloren's secret, and what's done with his phylactery;
     - names that sit close together: Bart and Bram (the keeper's default), Grim and Gimp, Orik and Ogrin;
     - ~~Gimp's kind~~ (half-elf, Decided 56);
-    - firearms (Gimp loves rifles: recommended as rare personal property, never a player weapon; still open after 4h Checkpoint D, which shows him with a pack and no rifle);
+    - ~~firearms~~ (answered 2026-10-10, Decided 77: very rare; Gimp or Boog may part with one as a weapon);
     - ~~why Gimp detests Maximo; how Glimmer's failed guardianship relates to the sealing; why Maximo cannot return~~ (answered 2026-10-10, Decided 66–68, 70);
     - ~~what Grim does for a living~~ (the grower, Decided 72);
-    - the fifth of the Fortunate Five, and whether Orik ever travelled with them; [the betrayer]'s and Phi's son's names; who gave Maximo the creed; Phi's choice at the end; the Fungal Warrens' and Ember Forge's bosses (`docs/STORY.md` §7);
+    - whether Orik ever travelled with the Five; Phi's son's name; Phi's choice at the end; the Fungal Warrens' and Ember Forge's bosses; Karias as the betrayer (pending; `docs/STORY.md` §7);
     - Toshi: what took him below and what became of him (his quest's shape), and what cursed Musashi's taste (the same thing?);
     - names that sit close together: Musashi and Maximo.
 13. **Phase 5 and 4i** *(2026-10-08)*:

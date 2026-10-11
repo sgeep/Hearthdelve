@@ -28,9 +28,9 @@ The player learns this in pieces across three acts (§4 says when). Nobody in th
 
 **Glimmer.** One of the fey spirits Karias wove into the seal's wards. She slipped out, damaged and forgetful, and the nearest living thing was a newborn beside two dead adults in the Hollows: **Ogrin**. She has been half-living in him since; she is why he grew ten years in two, and why he's ill (a boy's body carrying a spirit it wasn't made for). She is the "failed guardian" of her own half-memories.
 
-**Kariaston.** Maximo founded the village over the wound as a watch, named it for Karias, and gave it his creed, the words a being of light once gave him (**Open:** who; **Proposed:** a fey like Glimmer, which she half-remembers): *look to others as allies; do not judge a book by its cover; save as many as you can.* It's why liches, orcs and goblins are ordinary neighbours here.
+**Kariaston.** Maximo founded the village over the wound as a watch, named it for Karias, and gave it his creed, the words a being of light once gave him (**the owner, 2026-10-10:** he can't say who, and he means *can't*): *look to others as allies; do not judge a book by its cover; save as many as you can.* It's why liches, orcs and goblins are ordinary neighbours here.
 
-**The Fortunate Five.** About forty years ago (**Proposed** timing), five delvers went down into what the sealing left behind: **Phi'rai**, **Grim**, **Musashi**, **Bart** and a fifth (**Open**). They came back with more stories than they told. Phi and **Orik** rebuilt the wreck over the hatch into **Tally Ho!**; the Five split; Musashi lost his taste to something below, and his brother **Toshi** later went missing there; Bart stayed in Kariaston (Musashi doesn't name him among the Five because Bart asked him not to).
+**The Fortunate Five.** About forty years ago (**Proposed** timing), five delvers went down into what the sealing left behind: **Phi'rai**, **Grim**, **Musashi**, **Bart** and **Kresch**, a human fighter, very close to Grim, who has died since (the owner, 2026-10-10; how and where is open). They came back with more stories than they told. Phi and **Orik** rebuilt the wreck over the hatch into **Tally Ho!**; the Five split; Musashi lost his taste to something below, and his brother **Toshi** later went missing there; Bart stayed in Kariaston (Musashi doesn't name him among the Five because Bart asked him not to).
 
 **Phi.** A drow paladin, exiled from her homeland: she found a colleague of her parents performing rituals, tried to stop him with a group, and everyone with her died; he fled and she was blamed. She has a son at home she has never been able to return to. Her exile is why she was free to delve with the Five, and why she came back to Kariaston decades later as the closest thing she had to home.
 
@@ -149,10 +149,10 @@ The keeper arrives, inherits Tally Ho! by Phi's letter, meets Boog and Orik, lea
 | **Phi's son** | — | Arrives, waits at the Inn | His mother home | **Open:** home with her, or stays |
 
 **Notes on the cast:**
-- **Phi after she's found (Open):** the keeper's room was hers; Tally Ho! is the keeper's now. **Proposed:** she takes an Inn room (her son beside her), helps behind the bar some evenings, and in the end chooses (the owner's call: go home vindicated, or stay; a later visit either way).
-- **Kaloren (3a):** unconnected to the Five. His secret: how and where the Hollows made him a lich, and the phylactery below (Open 12's recommendation). **Proposed:** his own questline across Acts II–IV ending in the Frostvault, where what to do with the phylactery is the keeper's choice.
+- **Phi after she's found (Open; the owner isn't sure yet):** the keeper's room was hers; Tally Ho! is the keeper's now. **Proposed:** she takes an Inn room (her son beside her) and helps behind the bar some evenings; whether she stays or goes home at the end stays open.
+- **Kaloren (3a; the owner, 2026-10-10):** unconnected to the Five. His secret: how and where the Hollows made him a lich. **His phylactery is won from one of the endgame bosses;** that night, when the keeper goes up to their room, Kaloren is waiting there.
 - **Grim (7):** Kariaston's grower and the garden's mentor (Phase 5h's farming depth); his druid's visions are his own later mystery.
-- **Musashi and Toshi (Open):** the spine leaves Toshi open. **Proposed shape:** Toshi went down after a moss that might cure his brother's taste; a shapechanger below wears his face (the campaign's "fake Toshi"); the real Toshi is found in the Halls or deeper. Whether Musashi's taste returns is the owner's call.
+- **Musashi and Toshi (the owner, 2026-10-10):** Toshi went down after a moss that might cure his brother's taste; a shapechanger below wears his face; the real Toshi is found in the Halls or deeper, and **when he's found, he has found Musashi's taste**: it comes home with him.
 - **Gimp's oath (Proposed):** bound though locked away; his reason to live near the Hollows is both the darkness that's at home there and Karias.
 
 ## 6. The twelve conflicts (GDD §2.9), resolved
@@ -178,7 +178,11 @@ The keeper arrives, inherits Tally Ho! by Phi's letter, meets Boog and Orik, lea
 
 **Morale (Proposed):** the story gives Morale its purpose: it is the village's bond, which in Act IV renews the seal. Mechanically, Morale should then come from the community itself (residents settled, villagers' feelings, festivals, how well the village eats) rather than be a separate number to farm; how it's computed is the milestone's to decide (the GDD's open question narrows to that).
 
-**Still open (the owner's, never implied until decided):** the fifth of the Fortunate Five; [the betrayer]'s name; Phi's son's name; who gave Maximo the creed; Phi's choice at the end; the Ember Forge's and Fungal Warrens' bosses; Toshi and Musashi's taste; Orik and the Five; when Kaloren became a lich and what's done with his phylactery; the old party's other members; firearms (Gimp's rifle); the near names (Bart/Bram, Grim/Gimp, Orik/Ogrin, Musashi/Maximo).
+**Still open (the owner's, never implied until decided):** Phi's son's name; Phi's choice at the end; the Fungal Warrens' and Ember Forge's bosses; how and where Kresch died; Orik and the Five; when Kaloren became a lich; the old party's other members; the near names (Bart/Bram, Grim/Gimp, Orik/Ogrin, Musashi/Maximo).
+
+**Answered 2026-10-10 (after sign-off):** the fifth of the Five is Kresch (dead since, close to Grim); Maximo can't say who gave him the creed; Toshi is found having found Musashi's taste; Kaloren's phylactery comes from an endgame boss and he waits in the keeper's room that night; **firearms** are very rare but not unheard of, and Gimp or Boog may part with one as a weapon for the keeper at some point (a player weapon, when a milestone builds it).
+
+**Pending the owner's answer (2026-10-10): Karias as the betrayer.** The owner: *Karias is both the Warden and the betrayer; the Warden is the small shrivel of him that's left, who withstands constant pain and torture to keep the Hollows from leaking out again.* Everything below that names [the betrayer] as a separate drow is to be rewritten once the questions about Phi's past and the finale are answered.
 
 ## 8. The story and Phase 5 (proposals for each milestone's own plan)
 
