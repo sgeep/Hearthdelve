@@ -41,6 +41,8 @@ namespace Hearthdelve.Editor
         // The Crossroads (2026-10-10): Medieval City's dirt and cobble autotiles and More Grass Variations' patches.
         public const string CityTiles = "CityTiles";
         public const string MoreGrass = "MoreGrass";
+        // 5b: the calendar board in Tally Ho! (More Signage's framed board on two posts).
+        public const string SignagePack = "MoreSignage", Signage = "Signage";
 
         /// <summary>A crop's cells: the sheet, the group's left edge and the row. Each cell is 8×16, bottom-pivoted, on a 16-px row.</summary>
         public static readonly (string name, string file, int x, int row)[] Crops =
@@ -274,6 +276,11 @@ namespace Hearthdelve.Editor
                 for (int r = 3; r < 8; r++)
                     grass.Add(new SheetRect($"Cell_{c}_{r}", c * 8, r * 8, 8, 8, k_Centre));
             yield return new Sheet { Source = k_MoreGrass, Pack = PlainsPack, File = MoreGrass, Mode = SliceMode.Rects, Rects = grass.ToArray() };
+            yield return new Sheet
+            {
+                Source = "All_Exclusives_20261002/Addons/_Miscellany/More_Signage/MoreSignage_signage.png", Pack = SignagePack, File = Signage, Mode = SliceMode.Rects,
+                Rects = new[] { new SheetRect("NoticeBoard", 24, 131, 16, 18, k_Bottom) },
+            };
 
             // Every drawing's Minifantasy shadow, cut by the shadow's own extent and pivoted so it lies exactly under its drawing.
             foreach (var group in Shadows.GroupBy(s => s.file))

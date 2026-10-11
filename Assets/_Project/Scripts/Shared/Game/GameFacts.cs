@@ -166,6 +166,21 @@ namespace Hearthdelve.Shared.Game
     }
 
     /// <summary>A special request was met: the dish's quality (1 is a perfect Fine dish) and the thanks given.</summary>
+    /// <summary>5b: a birthday guest's favourite dish was brought to them on their birthday (their special request met).</summary>
+    public readonly struct BirthdayRemembered : IEvent
+    {
+        public readonly string CharacterId;
+        public readonly string RecipeId;
+        public readonly float Quality;
+
+        public BirthdayRemembered(string characterId, string recipeId, float quality)
+        {
+            CharacterId = characterId;
+            RecipeId = recipeId;
+            Quality = quality;
+        }
+    }
+
     public readonly struct CustomerRequestCompleted : IEvent
     {
         public readonly string PatronId;

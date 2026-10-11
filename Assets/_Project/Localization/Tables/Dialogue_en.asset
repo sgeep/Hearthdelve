@@ -1238,6 +1238,46 @@ MonoBehaviour:
     m_Localized: the pots are in a hurry. but fine.
     m_Metadata:
       m_Items: []
+  - m_Id: 1596220561960960
+    m_Localized: it's my found day! the day Grim found me.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1596220603904000
+    m_Localized: we're having cake. well, Grim calls it cake.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1596220603904001
+    m_Localized: happy found day, Ogrin.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1596220603904002
+    m_Localized: you can come to the cake. it's mostly bread. i like it anyway.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1596220603904003
+    m_Localized: aye, it's my birthday. dinnae tell Boog. he'll bake something.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1596220603904004
+    m_Localized: happy birthday, Orik.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1596220603904005
+    m_Localized: ...thank ye. one ale tonight, an' i'll pour it myself.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1596220603904006
+    m_Localized: well, darlin', it's my birthday. reckon i'll be in tonight.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1596220603904007
+    m_Localized: happy birthday, Bart.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1596220603904008
+    m_Localized: if there's grilled spider leg on the board, i'll be the happiest orc in Kariaston.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

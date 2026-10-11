@@ -25,6 +25,8 @@ MonoBehaviour:
     m_LocalVariables: []
   portrait: {fileID: 0}
   conversation: 
+  voicePitch: 1
+  lowVoice: 0
   tracked: 0
   values:
     craft: 0

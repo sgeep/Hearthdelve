@@ -32,7 +32,7 @@ namespace Hearthdelve.Story.Dialogue
         {
             "HH_Affinity", "HH_Respect", "HH_Remembers", "HH_QuestState", "HH_GiveQuest", "HH_PlayerName", "HH_Day", "HH_TimesDefeated",
             "HH_OpeningStage", "HH_QuestObject", "HH_HasQuestObject", "HH_DeliverQuestObject", "HH_Deed", "HH_PartsHome",
-            "HH_Doing", "HH_Today",
+            "HH_Doing", "HH_Today", "HH_Festival", "HH_DaysUntil", "HH_Birthday", "HH_Date",
         };
 
         static StoryHost Host => StoryHost.Instance;
@@ -92,6 +92,26 @@ namespace Hearthdelve.Story.Dialogue
         /// they have none). The schedule decides where people are; the conversation only reads it.
         /// </summary>
         [Preserve] public static string HH_Doing(string characterId) => Shared.Village.VillageLife.Doing(characterId);
+
+        // 5b: the calendar (dates derived from the day; names from the UI string table).
+
+        /// <summary>Whether a festival (by id, e.g. "remembrance") is today.</summary>
+        [Preserve] public static bool HH_Festival(string festival) => Shared.Calendar.GameCalendar.IsFestival(festival);
+
+        /// <summary>Days until a festival's next occurrence (0 on the day; -1 if there's no such festival).</summary>
+        [Preserve] public static double HH_DaysUntil(string festival) => Shared.Calendar.GameCalendar.DaysUntil(festival);
+
+        /// <summary>Whether it's this character's birthday today (Ogrin's is his found day).</summary>
+        [Preserve] public static bool HH_Birthday(string characterId) => Shared.Calendar.GameCalendar.IsBirthday(characterId);
+
+        /// <summary>Today's date as the HUD writes it ("9 Thawing"), in the player's language.</summary>
+        [Preserve] public static string HH_Date()
+        {
+            Shared.Calendar.CalendarDate d = Shared.Calendar.GameCalendar.Today;
+            string month = UnityEngine.Localization.Settings.LocalizationSettings.StringDatabase.GetLocalizedString("UI", Shared.Calendar.CalendarRules.MonthKey(d.Month));
+            string format = UnityEngine.Localization.Settings.LocalizationSettings.StringDatabase.GetLocalizedString("UI", "surface.date");
+            return string.Format(format, d.Day, month);
+        }
 
         /// <summary>Whether today is one of the village's seeded days: "herbs" (Kaloren's visit), "ogrin_well", "vigil" (4h C); "gimp", "glimmer" (D).</summary>
         [Preserve] public static bool HH_Today(string rule)

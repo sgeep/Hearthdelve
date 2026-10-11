@@ -14,6 +14,8 @@ namespace Hearthdelve.Shared.Story
         RequestKept,
         /// <summary><c>PartButchered</c> (4g Checkpoint C): a part broken down by the keeper, scoring at or above the deed's minimum.</summary>
         PartButchered,
+        /// <summary><c>BirthdayRemembered</c> (5b): a birthday guest given their favourite on their birthday (the guest is the subject).</summary>
+        BirthdayRemembered,
     }
 
     /// <summary>What a deed is done to or for: Love/Hate's target faction, whose friends are pleased.</summary>

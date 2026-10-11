@@ -38,19 +38,35 @@ namespace Hearthdelve.Shared.Village
         /// Tonight's familiar faces, in arrival order: each candidate rolls (seeded by the world and the day, so a reload keeps the
         /// same evening), at most <paramref name="max"/>, each at most once. Usually none or one; two now and then.
         /// </summary>
-        public static List<string> Tonight(int seed, int day, IReadOnlyList<Patron> candidates, int max = 2)
+        public static List<string> Tonight(int seed, int day, IReadOnlyList<Patron> candidates, int max = 2, IReadOnlyCollection<string> always = null)
         {
             var tonight = new List<string>();
             if (candidates == null) return tonight;
-            for (int i = 0; i < candidates.Count && tonight.Count < max; i++)
+            // 5b: whoever must come tonight (a birthday guest) comes first, beside the usual draw.
+            int extra = 0;
+            if (always != null)
+                foreach (Patron p in candidates)
+                    if (!string.IsNullOrEmpty(p.Character) && !tonight.Contains(p.Character) && Contains(always, p.Character))
+                    {
+                        tonight.Add(p.Character);
+                        extra++;
+                    }
+            for (int i = 0; i < candidates.Count && tonight.Count < max + extra; i++)
             {
                 Patron p = candidates[i];
                 if (string.IsNullOrEmpty(p.Character) || tonight.Contains(p.Character)) continue;
                 if (VillageDays.Unit(seed, day, k_Patrons + (uint)i * 7919u) < p.Chance) tonight.Add(p.Character);
             }
             // Arrival order varies with the evening, not always the first listed.
-            if (tonight.Count == 2 && VillageDays.Unit(seed, day, k_Patrons ^ 0xFFu) < 0.5f) tonight.Reverse();
+            if (extra == 0 && tonight.Count == 2 && VillageDays.Unit(seed, day, k_Patrons ^ 0xFFu) < 0.5f) tonight.Reverse();
             return tonight;
+        }
+
+        static bool Contains(IReadOnlyCollection<string> ids, string id)
+        {
+            foreach (string s in ids)
+                if (s == id) return true;
+            return false;
         }
     }
 }

@@ -133,6 +133,33 @@ namespace Hearthdelve.Editor
             (CharacterIds.Orik, () => new() { B(Morning, Night, TavernBar, "ledger") }),
         };
 
+        public const string FoundDay = "found_day";
+
+        /// <summary>
+        /// 5b: special days' blocks, added once to the existing (hand-tuned) schedules, in front of the ordinary ones: on Ogrin's found
+        /// day he's out in the yard at midday, and Grim and Kaloren drop by the cottage. A block already there (same activity and
+        /// occasion) is never added again, and nothing else in the schedule is touched.
+        /// </summary>
+        static readonly (string character, Func<ScheduleBlock> block)[] k_CalendarBlocks =
+        {
+            (CharacterIds.Ogrin, () => B(Midday + 60, Midday + 120, OgrinYard, FoundDay, ScheduleCondition.OnCalendar("birthday:ogrin"))),
+            (CharacterIds.Grim, () => B(Midday + 60, Midday + 120, GrimYard, FoundDay, ScheduleCondition.OnCalendar("birthday:ogrin"))),
+            (CharacterIds.Kaloren, () => B(Midday + 60, Midday + 120, CottageDoor, FoundDay, ScheduleCondition.OnCalendar("birthday:ogrin"))),
+        };
+
+        static void AddCalendarBlocks(ScheduleDefinition schedule)
+        {
+            schedule.blocks ??= new List<ScheduleBlock>();
+            foreach (var (character, make) in k_CalendarBlocks)
+            {
+                if (character != schedule.character) continue;
+                ScheduleBlock block = make();
+                bool there = schedule.blocks.Exists(b => b != null && b.activity == block.activity && b.anchor == block.anchor
+                                                         && b.conditions != null && b.conditions.Exists(c => c.kind == ScheduleConditionKind.Calendar));
+                if (!there) schedule.blocks.Insert(0, block);
+            }
+        }
+
         /// <summary>The sheets the cast needs beyond the village's own (Kaloren's and Bart's layers, the emotes with Bart's note).</summary>
         static IEnumerable<Sheet> CastSheets()
         {
@@ -161,6 +188,7 @@ namespace Hearthdelve.Editor
                 {
                     s.character = character;
                     if (fresh || s.blocks == null || s.blocks.Count == 0) s.blocks = blocks();
+                    AddCalendarBlocks(s);
                 });
                 if (!database.schedules.Contains(schedule)) database.schedules.Add(schedule);
             }
@@ -171,6 +199,11 @@ namespace Hearthdelve.Editor
                 // Once: Checkpoint D's tuning arrives in an asset made before it (zeros), never undoing a tuning since.
                 if (c.settings.gimpVisitChance <= 0f) c.settings.gimpVisitChance = VillageLifeSettings.Default.gimpVisitChance;
                 if (c.settings.glimmerChance <= 0f) c.settings.glimmerChance = VillageLifeSettings.Default.glimmerChance;
+            });
+            // 5b: the calendar, made once (tune it on the asset; its start date and month lengths lock once shipped).
+            database.calendar = LookTestContent.CreateOrUpdate<Hearthdelve.Shared.Calendar.CalendarConfig>(EditorPaths.Config + "/Calendar.asset", c =>
+            {
+                if (c.settings.months <= 0) c.settings = Hearthdelve.Shared.Calendar.CalendarSettings.Default;
             });
             BuildPatrons();
             EditorUtility.SetDirty(database);
@@ -339,9 +372,9 @@ namespace Hearthdelve.Editor
             return character switch
             {
                 CharacterIds.Maximo => new() { L("proclaim", flourish: CharacterAnim.Attack, every: 7f), L("lunch", face: "Content", every: 14f), L("vigil") },
-                CharacterIds.Kaloren => new() { L("reading", face: "Thinking", every: 12f), L(HerbVisit.Activity) },
-                CharacterIds.Grim => new() { L("chores", flourish: CharacterAnim.Attack, every: 6f), L("errand", face: "Happy", every: 16f) },
-                CharacterIds.Ogrin => new() { L("maps", hold: CharacterAnim.Gather), L("listening", face: "Heart", every: 11f), L("bed", face: "Thinking", every: 14f) },
+                CharacterIds.Kaloren => new() { L("reading", face: "Thinking", every: 12f), L(HerbVisit.Activity), L(FoundDay, face: "Happy", every: 10f) },
+                CharacterIds.Grim => new() { L("chores", flourish: CharacterAnim.Attack, every: 6f), L("errand", face: "Happy", every: 16f), L(FoundDay, face: "Content", every: 9f) },
+                CharacterIds.Ogrin => new() { L("maps", hold: CharacterAnim.Gather), L("listening", face: "Heart", every: 11f), L("bed", face: "Thinking", every: 14f), L(FoundDay, face: "Heart", every: 6f) },
                 CharacterIds.Bart => new() { L("playing", face: "Note", every: 2.5f), L("tuning", face: "Note", every: 9f), L("gossip", face: "Happy", every: 10f) },
                 _ => new(),
             };

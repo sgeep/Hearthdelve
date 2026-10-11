@@ -33,11 +33,11 @@ namespace Hearthdelve.Tests
                 Door = new Vector2(13.5f, 2.4f),
                 Rest = new Vector2(25.5f, 5.5f),
                 // The stairs up to the guest room: back-right corner, their flight solid, their cells and foot kept clear.
-                // 4h: the menu board stands by the door (SurfaceBuilder.TavernFixtures).
-                Fixtures = { new Rect(26f, 12f, 1f, 2f), new Rect(15f, 2f, 1f, 1f) },
+                // 4h: the menu board stands by the door; 5b: the calendar board beside it (SurfaceBuilder.TavernFixtures).
+                Fixtures = { new Rect(26f, 12f, 1f, 2f), new Rect(15f, 2f, 1f, 1f), new Rect(16f, 2f, 2f, 1f) },
             };
             shape.Reserved.UnionWith(new[] { new Vector2Int(26, 11), new Vector2Int(26, 12), new Vector2Int(26, 13) });
-            shape.Reserved.UnionWith(new[] { new Vector2Int(15, 2), new Vector2Int(15, 3) });
+            shape.Reserved.UnionWith(new[] { new Vector2Int(15, 2), new Vector2Int(15, 3), new Vector2Int(16, 2), new Vector2Int(17, 2), new Vector2Int(16, 3), new Vector2Int(17, 3) });
             // The stairs' approach from the left, where the flight's bottom step is drawn, and the arrival tile (2026-10-07).
             shape.Reserved.UnionWith(new[] { new Vector2Int(24, 12), new Vector2Int(25, 12), new Vector2Int(25, 13) });
             for (int i = 0; i < 6; i++) shape.Queue.Add(new Vector2(12.25f - i, 2.6f));

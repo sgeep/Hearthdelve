@@ -4035,6 +4035,118 @@ MonoBehaviour:
     m_Key: options.note.change_pad
     m_Metadata:
       m_Items: []
+  - m_Id: 4068460507443200
+    m_Key: surface.date
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460553580544
+    m_Key: calendar.long_date
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460553580545
+    m_Key: calendar.board
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460553580546
+    m_Key: calendar.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460553580547
+    m_Key: calendar.coming
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460553580548
+    m_Key: calendar.festival_today
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460553580549
+    m_Key: calendar.festival_tomorrow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460553580550
+    m_Key: calendar.festival_in
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460553580551
+    m_Key: calendar.birthday_today
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460553580552
+    m_Key: calendar.birthday_tomorrow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460553580553
+    m_Key: calendar.birthday_on
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460553580554
+    m_Key: calendar.found_day_today
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460553580555
+    m_Key: calendar.found_day_tomorrow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460553580556
+    m_Key: calendar.found_day_on
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460553580557
+    m_Key: calendar.nothing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460553580558
+    m_Key: calendar.back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460599717888
+    m_Key: calendar.month.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460599717889
+    m_Key: calendar.month.2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460599717890
+    m_Key: calendar.month.3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460599717891
+    m_Key: calendar.month.4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460599717892
+    m_Key: calendar.weekday.1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460599717893
+    m_Key: calendar.weekday.2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460599717894
+    m_Key: calendar.weekday.3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460599717895
+    m_Key: calendar.weekday.4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460599717896
+    m_Key: calendar.weekday.5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460599717897
+    m_Key: calendar.weekday.6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460599717898
+    m_Key: calendar.weekday.7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460599717899
+    m_Key: calendar.festival.remembrance
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

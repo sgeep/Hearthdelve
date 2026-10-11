@@ -503,7 +503,11 @@ namespace Hearthdelve.Tavern.Scene
             Session.Served += (c, t, gold, tip) => EventBus<DishServed>.Publish(new DishServed(t.Recipe.id, PatronId(c), t.DishQuality, gold, tip, c.IsRequest));
             Session.RequestIssued += (c, dish) => EventBus<CustomerRequestIssued>.Publish(new CustomerRequestIssued(PatronId(c), c.Id, dish.id));
             Session.RequestCompleted += (c, dish, quality, gold, renown) =>
+            {
                 EventBus<CustomerRequestCompleted>.Publish(new CustomerRequestCompleted(PatronId(c), c.Id, dish.id, quality, gold, renown));
+                // 5b: a birthday guest given their favourite.
+                if (c.Birthday && dish == c.Favourite && c.CharacterId != null) EventBus<BirthdayRemembered>.Publish(new BirthdayRemembered(c.CharacterId, dish.id, quality));
+            };
             Session.RequestFailed += (c, dish, outcome) =>
                 EventBus<CustomerRequestFailed>.Publish(new CustomerRequestFailed(PatronId(c), c.Id, dish != null ? dish.id : null, RequestReason(outcome)));
             m_Arrivals = new ArrivalSchedule(m_Content.service.service, m_Content.customers, m_Random);
@@ -531,7 +535,9 @@ namespace Hearthdelve.Tavern.Scene
             var candidates = new List<Hearthdelve.Shared.Village.CommunityRules.Patron>();
             foreach (NamedPatron p in m_Content.namedPatrons)
                 if (p != null && p.profile != null) candidates.Add(new Hearthdelve.Shared.Village.CommunityRules.Patron(p.character, p.chance));
-            foreach (string id in Hearthdelve.Shared.Village.CommunityRules.Tonight(m_Flow.State.WorldSeed, m_Flow.State.Day, candidates))
+            // 5b: a birthday guest always comes to dinner on their birthday.
+            var birthdays = Hearthdelve.Shared.Calendar.GameCalendar.Birthdays.ConvertAll(b => b.character);
+            foreach (string id in Hearthdelve.Shared.Village.CommunityRules.Tonight(m_Flow.State.WorldSeed, m_Flow.State.Day, candidates, always: birthdays))
                 m_Tonight.Add(m_Content.namedPatrons.Find(p => p != null && p.character == id));
         }
 
@@ -547,7 +553,15 @@ namespace Hearthdelve.Tavern.Scene
         public CustomerAgent SpawnFamiliarFace(NamedPatron patron)
         {
             CustomerAgent agent = SpawnCustomer(patron.profile);
-            if (agent != null) agent.WearAs(patron.layers, patron.shadow, patron.character);
+            if (agent == null) return null;
+            agent.WearAs(patron.layers, patron.shadow, patron.character);
+            // 5b: on their birthday they ask for their favourite (if it's on tonight's menu).
+            foreach (Hearthdelve.Shared.Calendar.CalendarBirthday b in Hearthdelve.Shared.Calendar.GameCalendar.Birthdays)
+                if (b.character == patron.character && agent.Logic != null)
+                {
+                    agent.Logic.Birthday = true;
+                    agent.Logic.Favourite = m_Content.recipes.Find(r => r != null && r.id == b.favouriteDish);
+                }
             return agent;
         }
 

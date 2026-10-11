@@ -113,8 +113,10 @@ namespace Hearthdelve.Editor
 
             // The furniture catalogue's names, descriptions and colourways, and the palette ramps, tiers and finishes, come from
             // their own tables (4f Checkpoint B).
-            FillTable(Loc.UITable, LocKeys.English.Concat(TavernLocKeys.English).Concat(LoopLocKeys.English).Concat(DecorateLocKeys.English).Concat(StoryLocKeys.English).Concat(SurfaceLocKeys.English).Concat(GardenLocKeys.English).Concat(MenuLocKeys.English)
+            FillTable(Loc.UITable, LocKeys.English.Concat(TavernLocKeys.English).Concat(LoopLocKeys.English).Concat(DecorateLocKeys.English).Concat(StoryLocKeys.English).Concat(SurfaceLocKeys.English).Concat(CalendarLocKeys.English).Concat(GardenLocKeys.English).Concat(MenuLocKeys.English)
                 .Concat(CreatorLocKeys.English).Concat(OnboardingLocKeys.English).Concat(FurnitureCatalog.English()).Concat(FurnitureLooks.English()).Concat(KeeperContent.English()).Concat(QuestObjectContent.English), k_GeneratedPrefixes);
+            // 5b: the calendar's names are the owner's once written: added only when missing, never over a change (C3).
+            AddMissing(Loc.UITable, CalendarLocKeys.Names);
             FillTable(Loc.ContentTable, ContentEnglish.Concat(ContentEntries));
             // 4i-C: the credits screen's own table (checked against docs/CREDITS.md by CreditsTests).
             FillTable(Loc.CreditsTable, CreditsLocKeys.English);
@@ -126,6 +128,18 @@ namespace Hearthdelve.Editor
         /// under one of them that's no longer generated is removed, so a renamed colorway leaves no stale entry behind.
         /// </summary>
         static readonly string[] k_GeneratedPrefixes = { "look.", "keeper." };
+
+        /// <summary>Adds entries that aren't in the table yet; an entry already there (perhaps renamed by the owner) is left as it is.</summary>
+        internal static void AddMissing(string tableName, IEnumerable<(string key, string english)> entries)
+        {
+            var collection = LocalizationEditorSettings.GetStringTableCollection(tableName);
+            var table = collection?.GetTable(k_English) as StringTable;
+            if (table == null) return;
+            foreach (var (key, text) in entries)
+                if (table.GetEntry(key) == null) table.AddEntry(key, text);
+            EditorUtility.SetDirty(table);
+            EditorUtility.SetDirty(table.SharedData);
+        }
 
         internal static void FillTable(string tableName, IEnumerable<(string key, string english)> entries, string[] prunePrefixes = null)
         {

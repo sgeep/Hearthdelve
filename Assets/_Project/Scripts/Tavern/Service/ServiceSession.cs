@@ -163,6 +163,7 @@ namespace Hearthdelve.Tavern.Service
 
         CustomerRequestSettings m_Requests;
         int m_OrdersPlaced;
+        int m_BirthdayRequests;
         float m_RenownExact;
         int m_RenownCounted;
 
@@ -174,7 +175,10 @@ namespace Hearthdelve.Tavern.Service
         void MaybeRequest(CustomerLogic customer, RecipeDefinition dish)
         {
             int before = m_OrdersPlaced++;
-            if (!CustomerRequestRules.IsRequest(before, Ledger.RequestsIssued, m_Requests, m_Random)) return;
+            // 5b: a birthday guest's favourite is always a request, and doesn't count against the evening's cap.
+            bool birthday = customer.Birthday && dish != null && dish == customer.Favourite;
+            if (birthday) m_BirthdayRequests++;
+            else if (!CustomerRequestRules.IsRequest(before, Ledger.RequestsIssued - m_BirthdayRequests, m_Requests, m_Random)) return;
             customer.MarkRequest();
             Ledger.RequestsIssued++;
             RequestIssued?.Invoke(customer, dish);
@@ -279,7 +283,11 @@ namespace Hearthdelve.Tavern.Service
 
         void OnOrderRequested(CustomerLogic customer)
         {
-            var choice = Preferences.ChooseOrder(AvailableDishes(), customer.Traits, m_Economy, m_Random);
+            List<RecipeDefinition> available = AvailableDishes();
+            // 5b: someone with a favourite (a birthday guest) orders it if it can be had tonight.
+            var choice = customer.Favourite != null && available.Contains(customer.Favourite)
+                ? customer.Favourite
+                : Preferences.ChooseOrder(available, customer.Traits, m_Economy, m_Random);
             var spare = choice != null ? SpareOf(choice) : null;
             if (spare != null)
             {

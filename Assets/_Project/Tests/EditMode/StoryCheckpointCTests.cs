@@ -40,7 +40,10 @@ namespace Hearthdelve.Tests
             Assert.That(Story.deeds.Select(d => d.id), Is.EquivalentTo(new[]
             {
                 StoryBuilder.DisplayedTrophy, StoryBuilder.ReturnedBoogsBomb, StoryBuilder.FelledLarderTroll, StoryBuilder.KeptAWish, StoryBuilder.FineButchery,
+                // 5b: a birthday guest given their favourite on their birthday.
+                StoryBuilder.RememberedBirthday,
             }), "a compact vocabulary: not every gameplay event is a deed");
+            Assert.That((Deed(StoryBuilder.RememberedBirthday).source, Deed(StoryBuilder.RememberedBirthday).subject), Is.EqualTo((DeedSource.BirthdayRemembered, CharacterIds.Bart)));
             Assert.That((Deed(StoryBuilder.FelledLarderTroll).source, Deed(StoryBuilder.FelledLarderTroll).subject), Is.EqualTo((DeedSource.BossFirstCleared, "larder_troll")));
             Assert.That((Deed(StoryBuilder.KeptAWish).source, Deed(StoryBuilder.KeptAWish).minimum), Is.EqualTo((DeedSource.RequestKept, 0.9f)));
             Assert.That((Deed(StoryBuilder.FineButchery).source, Deed(StoryBuilder.FineButchery).minimum), Is.EqualTo((DeedSource.PartButchered, 0.9f)));

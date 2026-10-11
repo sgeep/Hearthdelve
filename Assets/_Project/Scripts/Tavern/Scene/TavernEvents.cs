@@ -32,6 +32,8 @@ namespace Hearthdelve.Tavern.Scene
         MarketStall,
         /// <summary>A bed of the garden (4h Checkpoint B): plant, tend, harvest.</summary>
         GardenBed,
+        /// <summary>The calendar board in Tally Ho! (5b): today's date and what's coming.</summary>
+        CalendarBoard,
     }
 
     /// <summary>What the interaction hint says (the UI turns it into localized text).</summary>

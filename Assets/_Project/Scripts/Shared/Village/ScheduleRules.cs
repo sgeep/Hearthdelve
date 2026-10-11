@@ -50,10 +50,13 @@ namespace Hearthdelve.Shared.Village
         public readonly VillageLifeSettings Settings;
         readonly Func<string, string> m_QuestObject;
         readonly Func<string, bool> m_Beat;
+        /// <summary>5b: the calendar (null: the default calendar).</summary>
+        public readonly Hearthdelve.Shared.Calendar.CalendarSettings? Dates;
 
         public ScheduleWorld(int day, int seed, bool openingComplete, VillageLifeSettings settings, Func<string, string> questObjectStatus = null,
-            Func<string, bool> beatSeen = null)
+            Func<string, bool> beatSeen = null, Hearthdelve.Shared.Calendar.CalendarSettings? calendar = null)
         {
+            Dates = calendar;
             Day = day;
             Seed = seed;
             OpeningComplete = openingComplete;
@@ -64,6 +67,8 @@ namespace Hearthdelve.Shared.Village
 
         public string QuestObjectStatus(string id) => m_QuestObject != null ? m_QuestObject(id) ?? "none" : "none";
         public bool BeatSeen(string id) => m_Beat != null && id != null && m_Beat(id);
+        /// <summary>5b: a calendar occasion today (festival:&lt;id&gt; or birthday:&lt;character&gt;).</summary>
+        public bool On(string occasion) => Hearthdelve.Shared.Calendar.CalendarRules.Is(occasion, Day, Dates ?? Hearthdelve.Shared.Calendar.CalendarSettings.Default);
     }
 
     /// <summary>
@@ -135,7 +140,8 @@ namespace Hearthdelve.Shared.Village
         public static bool Holds(DayRule rule, in ScheduleWorld world) => rule switch
         {
             DayRule.HerbDay => HerbDay(world.Seed, world.Day, world.Settings),
-            DayRule.OgrinWell => OgrinWell(world.Seed, world.Day, world.Settings),
+            // 5b: on his found day Ogrin is always well (Grim: "he's always well on his found day").
+            DayRule.OgrinWell => world.On("birthday:ogrin") || OgrinWell(world.Seed, world.Day, world.Settings),
             DayRule.MaximoVigil => MaximoVigil(world.Seed, world.Day, world.Settings),
             DayRule.GimpVisit => GimpVisit(world.Seed, world.Day, world.Settings),
             DayRule.GlimmerEvening => GlimmerEvening(world.Seed, world.Day, world.Settings),
@@ -175,6 +181,7 @@ namespace Hearthdelve.Shared.Village
             ScheduleConditionKind.OpeningComplete => world.OpeningComplete,
             ScheduleConditionKind.QuestObject => string.Equals(world.QuestObjectStatus(c.id), c.status ?? "none", StringComparison.OrdinalIgnoreCase),
             ScheduleConditionKind.Beat => world.BeatSeen(c.id),
+            ScheduleConditionKind.Calendar => world.On(c.id),
             _ => false,
         };
 

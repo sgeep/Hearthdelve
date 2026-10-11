@@ -25,6 +25,8 @@ MonoBehaviour:
     m_LocalVariables: []
   portrait: {fileID: 11400000, guid: 8fc1c2439bb74e84f964cc0fdc15c63f, type: 2}
   conversation: Musashi/Hub
+  voicePitch: 1
+  lowVoice: 0
   tracked: 1
   values:
     craft: 80

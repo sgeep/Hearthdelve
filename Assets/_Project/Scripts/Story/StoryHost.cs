@@ -84,6 +84,7 @@ namespace Hearthdelve.Story
             EventBus<KeeperEnteredArea>.Subscribe(OnKeeperEnteredArea);
             EventBus<BossFirstCleared>.Subscribe(OnBossFirstCleared);
             EventBus<CustomerRequestCompleted>.Subscribe(OnRequestCompleted);
+            EventBus<BirthdayRemembered>.Subscribe(OnBirthdayRemembered);
             EventBus<PartButchered>.Subscribe(OnPartButchered);
             EventBus<QuestObjectBroughtHome>.Subscribe(OnQuestObjectBroughtHome);
             EventBus<QuestObjectDelivered>.Subscribe(OnQuestObjectDelivered);
@@ -98,6 +99,7 @@ namespace Hearthdelve.Story
             EventBus<KeeperEnteredArea>.Unsubscribe(OnKeeperEnteredArea);
             EventBus<BossFirstCleared>.Unsubscribe(OnBossFirstCleared);
             EventBus<CustomerRequestCompleted>.Unsubscribe(OnRequestCompleted);
+            EventBus<BirthdayRemembered>.Unsubscribe(OnBirthdayRemembered);
             EventBus<PartButchered>.Unsubscribe(OnPartButchered);
             EventBus<QuestObjectBroughtHome>.Unsubscribe(OnQuestObjectBroughtHome);
             EventBus<QuestObjectDelivered>.Unsubscribe(OnQuestObjectDelivered);
@@ -199,6 +201,7 @@ namespace Hearthdelve.Story
         // 4g Checkpoint C: the few facts that are deeds when they're remarkable (the deed's own subject and minimum decide).
         void OnBossFirstCleared(BossFirstCleared e) => Commit(DeedSource.BossFirstCleared, e.BossId);
         void OnRequestCompleted(CustomerRequestCompleted e) => Commit(DeedSource.RequestKept, e.RecipeId, e.Quality, RelationshipRules.Keeper);
+        void OnBirthdayRemembered(BirthdayRemembered e) => Commit(DeedSource.BirthdayRemembered, e.CharacterId, e.Quality, RelationshipRules.Keeper);
         void OnPartButchered(PartButchered e) => Commit(DeedSource.PartButchered, e.PartId, e.Score, e.By);
 
         /// <summary>Commits every deed the fact makes (<see cref="RelationshipRules.Qualifies"/>) to the characters who learn of it.</summary>

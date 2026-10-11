@@ -30,9 +30,12 @@ namespace Hearthdelve.UI.Tavern
         [SerializeField] GameObject m_NoteRoot;
         [SerializeField] LocalizedSuperText m_Note;
         [SerializeField, Min(0.5f)] float m_NoteSeconds = 3f;
+        [SerializeField, Tooltip("5b: today's date (\"9 Thawing\"), under the clock.")] LocalizedSuperText m_Date;
+        [SerializeField, Tooltip("5b: the date's tab, shown with the clock.")] GameObject m_DateRoot;
 
         bool m_DecorateShown;
         int m_Shown = -1;
+        int m_ShownDay = -1;
         int m_ShownVigor = -1, m_ShownMax = -1;
         Coroutine m_NoteHide;
 
@@ -44,6 +47,16 @@ namespace Hearthdelve.UI.Tavern
         /// <summary>Pips on show, full or empty (tests).</summary>
         public int ShownPips => m_ShownMax;
         public bool NoteShown => m_NoteRoot != null && m_NoteRoot.activeSelf;
+        /// <summary>The game day whose date is on show (tests).</summary>
+        public int ShownDay => m_ShownDay;
+        public LocalizedSuperText Date => m_Date;
+
+        /// <summary>5b: the date line under the clock.</summary>
+        public void ConfigureDate(LocalizedSuperText date, GameObject dateRoot)
+        {
+            m_Date = date;
+            m_DateRoot = dateRoot;
+        }
 
         public void Configure(GameObject root, LocalizedSuperText text, GameObject decorateRoot = null, LocalizedSuperText decorate = null,
             Image[] pips = null, GameObject noteRoot = null, LocalizedSuperText note = null)
@@ -80,8 +93,16 @@ namespace Hearthdelve.UI.Tavern
             GameFlow flow = GameFlow.Instance;
             bool shown = director != null && director.Phase == TavernPhase.Daytime && flow != null && flow.InGame;
             if (m_Root != null && m_Root.activeSelf != shown) m_Root.SetActive(shown);
+            if (m_DateRoot != null && m_DateRoot.activeSelf != shown) m_DateRoot.SetActive(shown);
             if (shown && m_Shown != SurfaceTime.ShownMinute) Show(SurfaceTime.ShownMinute);
             if (shown) ShowVigor(flow.State.Vigor.Current, flow.State.Vigor.Max);
+            // Only once the tables are loaded: a name looked up earlier would freeze its key into the line (the web).
+            if (shown && m_Date != null && m_ShownDay != flow.State.Day && Loc.IsReady)
+            {
+                m_ShownDay = flow.State.Day;
+                Hearthdelve.Shared.Calendar.CalendarDate d = Hearthdelve.Shared.Calendar.GameCalendar.Today;
+                m_Date.Set(CalendarLocKeys.Date, d.Day, Loc.UI(Hearthdelve.Shared.Calendar.CalendarRules.MonthKey(d.Month)));
+            }
             // Decorating is a key away indoors (4h): say which, quietly.
             bool decorate = shown && SurfaceArea.Current != null && SurfaceArea.Current.Indoors && (DecorateMode.Instance == null || !DecorateMode.Instance.IsActive);
             if (m_DecorateRoot != null && m_DecorateRoot.activeSelf != decorate) m_DecorateRoot.SetActive(decorate);

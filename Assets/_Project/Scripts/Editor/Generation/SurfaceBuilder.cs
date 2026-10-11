@@ -32,9 +32,9 @@ namespace Hearthdelve.Editor
         const string k_Surface = "Surface";
 
         /// <summary>The tavern cells the daytime places stand on, kept clear of furniture: the menu board by the door, its step, the storeroom shelves.</summary>
-        public static readonly Vector2Int[] TavernReserved = { new(15, 2), new(15, 3) };
+        public static readonly Vector2Int[] TavernReserved = { new(15, 2), new(15, 3), new(16, 2), new(17, 2), new(16, 3), new(17, 3) };
         /// <summary>The menu board and the storeroom shelves (area tiles): solid fixtures the layout check walks round.</summary>
-        public static readonly Rect[] TavernFixtures = { new(15f, 2f, 1f, 1f) };
+        public static readonly Rect[] TavernFixtures = { new(15f, 2f, 1f, 1f), new(16f, 2f, 2f, 1f) };
         /// <summary>Fixtures given up since (the storeroom shelves became furniture after the Checkpoint A playtest).</summary>
         static readonly Rect[] k_RetiredFixtures = { new(25f, 9f, 1f, 1f) };
                 /// <summary>Phi's portrait on the upstairs room's back wall (area tiles): wall decor can't hang behind it.</summary>
@@ -146,6 +146,9 @@ namespace Hearthdelve.Editor
             // The menu board, standing just inside the door: the evening begins here, when the player says.
             Fixture(places, "Menu Board", Sprite(KariastonSheets.TownsPack, KariastonSheets.TownsProps, "MenuBoard"), new Vector2(15.5f, 2.05f),
                 TavernInteractableKind.MenuBoard, SurfaceLocKeys.MenuBoard, new Vector2(0f, 1.1f), solid: new Vector2(0.8f, 0.4f));
+            // 5b: the calendar board, beside the menu board: today's date and what's coming.
+            Fixture(places, "Calendar Board", Sprite(KariastonSheets.SignagePack, KariastonSheets.Signage, "NoticeBoard"), new Vector2(17f, 2.05f),
+                TavernInteractableKind.CalendarBoard, CalendarLocKeys.Board, new Vector2(0f, 1.1f), solid: new Vector2(1.6f, 0.4f));
             // The storeroom shelves are furniture now (FurnitureContent): placed in the room, movable in Decorate Mode.
             // Phi's portrait, upstairs, on the wall by the bed the keeper wakes in.
             Vector2 portrait = upstairs.Origin + new Vector2(PortraitWall.center.x, PortraitWall.yMin);
@@ -175,6 +178,7 @@ namespace Hearthdelve.Editor
 
             BuildClockFace(ui);
             BuildPrepConfirm(ui);
+            BuildCalendarPanel(ui);
             BuildGardenPanel(ui);
             // 4i-A (D3): the first free day's prompts, over the interaction hint.
             FirstImpressionsUI.BuildSurfacePrompts(ui);
@@ -267,6 +271,11 @@ namespace Hearthdelve.Editor
             DungeonUI.AddImage(tab, DungeonUI.UISprite("Panel"), Color.white, Image.Type.Sliced);
             LocalizedSuperText text = LookTestBuilder.Text(tab, "Time", SurfaceLocKeys.Clock, TextStyle.Body, DungeonUI.k_Ink, TextAnchor.MiddleCenter,
                 Vector2.zero, Vector2.one, new Vector2(0.5f, 0.5f), Vector2.zero, Vector2.zero);
+            // 5b: today's date on a tab of its own under the clock ("14 Deepfrost" at its longest).
+            RectTransform dateTab = LookTestBuilder.UIRect(root, "DateTab", new Vector2(0f, 1f), new Vector2(0f, 1f), new Vector2(3f, -27f), new Vector2(76f, 24f));
+            DungeonUI.AddImage(dateTab, DungeonUI.UISprite("Panel"), Color.white, Image.Type.Sliced);
+            LocalizedSuperText date = LookTestBuilder.Text(dateTab, "Date", CalendarLocKeys.Date, TextStyle.Body, DungeonUI.k_Ink, TextAnchor.MiddleCenter,
+                Vector2.zero, Vector2.one, new Vector2(0.5f, 0.5f), Vector2.zero, Vector2.zero);
 
             // Vigor: small pips right of the tab, each a dark frame round a 4×6 light (full: warm; spent: dark).
             RectTransform vigor = LookTestBuilder.UIRect(tab, "Vigor", new Vector2(1f, 0.5f), new Vector2(0f, 0.5f), new Vector2(3f, 0f), new Vector2(k_MaxPips * 7f, 8f));
@@ -281,7 +290,7 @@ namespace Hearthdelve.Editor
 
             // The harvest's note, under the tab for a moment: wide enough for the longest crop's line on one line (the 4i-C
             // playtest: "3 fine onion into the storeroom" wrapped in 150 and ran into the frame).
-            RectTransform note = LookTestBuilder.UIRect(root, "Note", new Vector2(0f, 1f), new Vector2(0f, 1f), new Vector2(3f, -26f), new Vector2(HarvestNoteWidth, 24f));
+            RectTransform note = LookTestBuilder.UIRect(root, "Note", new Vector2(0f, 1f), new Vector2(0f, 1f), new Vector2(3f, -52f), new Vector2(HarvestNoteWidth, 24f));
             DungeonUI.AddImage(note, DungeonUI.UISprite("Panel"), Color.white, Image.Type.Sliced);
             LocalizedSuperText noteText = LookTestBuilder.Text(note, "Text", GardenLocKeys.Harvested, TextStyle.Body, DungeonUI.k_Ink, TextAnchor.MiddleCenter,
                 Vector2.zero, Vector2.one, new Vector2(0.5f, 0.5f), Vector2.zero, new Vector2(-12f, 0f));
@@ -290,10 +299,34 @@ namespace Hearthdelve.Editor
             RectTransform hint = LookTestBuilder.UIRect(root, "Decorate", new Vector2(0f, 0f), new Vector2(0f, 0f), new Vector2(5f, 3f), new Vector2(90f, 12f));
             LocalizedSuperText decorate = LookTestBuilder.Text(hint, "Text", SurfaceLocKeys.DecorateHint, TextStyle.Secondary, DungeonUI.k_Light, TextAnchor.MiddleLeft,
                 Vector2.zero, Vector2.one, new Vector2(0f, 0.5f), Vector2.zero, Vector2.zero);
-            root.gameObject.AddComponent<SurfaceClockView>().Configure(tab.gameObject, text, hint.gameObject, decorate, pips, note.gameObject, noteText);
+            SurfaceClockView view = root.gameObject.AddComponent<SurfaceClockView>();
+            view.Configure(tab.gameObject, text, hint.gameObject, decorate, pips, note.gameObject, noteText);
+            view.ConfigureDate(date, dateTab.gameObject);
             tab.gameObject.SetActive(false);
+            dateTab.gameObject.SetActive(false);
             hint.gameObject.SetActive(false);
             note.gameObject.SetActive(false);
+        }
+
+        /// <summary>
+        /// The calendar board's panel (5b): the long date under the title, then up to four things coming in the next fortnight,
+        /// soonest first, and "back".
+        /// </summary>
+        static void BuildCalendarPanel(Canvas ui)
+        {
+            const int lines = 4;
+            Transform old = ui.transform.Find("CalendarPanel");
+            if (old != null) Object.DestroyImmediate(old.gameObject);
+            RectTransform root = DungeonUI.FullScreen(ui, "CalendarPanel");
+            RectTransform panel = DungeonUI.Panel(root, new Vector2(220f, 128f), Vector2.zero);
+            DungeonUI.Title(panel, CalendarLocKeys.Title);
+            LocalizedSuperText today = DungeonUI.Line(panel, "Today", CalendarLocKeys.LongDate, 30f);
+            DungeonUI.Line(panel, "Coming", CalendarLocKeys.Coming, 14f, style: TextStyle.Secondary);
+            var rows = new LocalizedSuperText[lines];
+            for (int i = 0; i < lines; i++) rows[i] = DungeonUI.Line(panel, $"Line {i + 1}", null, 1f - i * 12f);
+            Button back = TavernScreens.SmallButton(panel, "Back", CalendarLocKeys.Back, new Vector2(0.5f, 0f), new Vector2(0f, 6f), 80f, out _);
+            root.gameObject.AddComponent<CalendarPanel>().Configure(panel.gameObject, today, rows, back);
+            panel.gameObject.SetActive(false);
         }
 
         /// <summary>The menu board's question: begin evening prep now? ("not yet" is the default).</summary>

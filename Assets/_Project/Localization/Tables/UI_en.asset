@@ -4038,6 +4038,118 @@ MonoBehaviour:
     m_Localized: "left / right: change \xB7 LB / RB: tab \xB7 B: back"
     m_Metadata:
       m_Items: []
+  - m_Id: 4068460507443200
+    m_Localized: '{0} {1}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460553580544
+    m_Localized: '{0}, {1} {2}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460553580545
+    m_Localized: look at the calendar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460553580546
+    m_Localized: the calendar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460553580547
+    m_Localized: coming up
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460553580548
+    m_Localized: '{0} is today'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460553580549
+    m_Localized: '{0} is tomorrow'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460553580550
+    m_Localized: '{0} in {1} days'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460553580551
+    m_Localized: '{0}''s birthday is today'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460553580552
+    m_Localized: '{0}''s birthday is tomorrow'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460553580553
+    m_Localized: '{0}''s birthday, {1}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460553580554
+    m_Localized: '{0}''s found day is today'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460553580555
+    m_Localized: '{0}''s found day is tomorrow'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460553580556
+    m_Localized: '{0}''s found day, {1}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460553580557
+    m_Localized: nothing this fortnight
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460553580558
+    m_Localized: back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460599717888
+    m_Localized: Thawing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460599717889
+    m_Localized: Highsun
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460599717890
+    m_Localized: Emberfall
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460599717891
+    m_Localized: Deepfrost
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460599717892
+    m_Localized: Firstday
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460599717893
+    m_Localized: Marketday
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460599717894
+    m_Localized: Midweek
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460599717895
+    m_Localized: Hearthday
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460599717896
+    m_Localized: Fifthday
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460599717897
+    m_Localized: Lampday
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460599717898
+    m_Localized: Restday
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4068460599717899
+    m_Localized: Karias Remembrance Day
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

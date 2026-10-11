@@ -34,6 +34,8 @@ namespace Hearthdelve.Shared.Village
         QuestObject,
         /// <summary>4h Checkpoint D: a one-time story beat (<see cref="ScheduleCondition.id"/>, e.g. beat:gimp_intro) has happened.</summary>
         Beat,
+        /// <summary>5b: today is a calendar occasion (<see cref="ScheduleCondition.id"/>: festival:remembrance, birthday:ogrin).</summary>
+        Calendar,
     }
 
     /// <summary>One condition on a block. A block's conditions combine with AND; <see cref="negate"/> turns one round.</summary>
@@ -51,6 +53,8 @@ namespace Hearthdelve.Shared.Village
         public static ScheduleCondition NotOn(DayRule rule) => new() { kind = ScheduleConditionKind.Day, rule = rule, negate = true };
         public static ScheduleCondition FromDay(int day) => new() { kind = ScheduleConditionKind.DayAtLeast, number = day };
         public static ScheduleCondition After(string beat) => new() { kind = ScheduleConditionKind.Beat, id = beat };
+        public static ScheduleCondition OnCalendar(string occasion) => new() { kind = ScheduleConditionKind.Calendar, id = occasion };
+        public static ScheduleCondition NotOnCalendar(string occasion) => new() { kind = ScheduleConditionKind.Calendar, id = occasion, negate = true };
     }
 
     /// <summary>

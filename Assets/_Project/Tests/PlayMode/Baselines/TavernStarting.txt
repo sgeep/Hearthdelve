@@ -5,6 +5,7 @@ collider|BoxCollider2D|1.5000,11.0000..2.1250,13.7500|trigger False|layer Obstac
 collider|BoxCollider2D|10.3750,7.2500..11.1250,8.2500|trigger False|layer Obstacles
 collider|BoxCollider2D|12.8000,1.8700..14.2000,2.5700|trigger True|layer Default
 collider|BoxCollider2D|15.1000,2.0500..15.9000,2.4500|trigger False|layer Obstacles
+collider|BoxCollider2D|16.2000,2.0500..17.8000,2.4500|trigger False|layer Obstacles
 collider|BoxCollider2D|16.8750,4.2500..17.6250,5.2500|trigger False|layer Obstacles
 collider|BoxCollider2D|17.0000,11.5000..18.5000,12.8750|trigger False|layer Obstacles
 collider|BoxCollider2D|17.7500,4.0000..19.2500,5.5000|trigger False|layer Obstacles
@@ -28,7 +29,7 @@ collider|BoxCollider2D|7.8750,7.2500..8.6250,8.2500|trigger False|layer Obstacle
 collider|BoxCollider2D|8.7500,7.0000..10.2500,8.5000|trigger False|layer Obstacles
 grid|00|############################
 grid|01|############################
-grid|02|#..............#...........#
+grid|02|#..............###.........#
 grid|03|#.....................####.#
 grid|04|#...............#####......#
 grid|05|#...............#####......#
@@ -45,6 +46,7 @@ grid|15|############################
 grid|16|############################
 grid|bounds (x:0, y:0, width:28, height:17)
 interactable|ButcherBlock|station.butcher_block|reach 1.2000|use 23.9500,2.4500|highlight CornerBL@22.1250,2.8750/Above/0/1.0000,0.8200,0.3000,1.0000/Sprite-Unlit-Default;CornerBR@25.7500,2.8750/Above/0/1.0000,0.8200,0.3000,1.0000/Sprite-Unlit-Default;CornerTL@22.1250,5.0000/Above/0/1.0000,0.8200,0.3000,1.0000/Sprite-Unlit-Default;CornerTR@25.7500,5.0000/Above/0/1.0000,0.8200,0.3000,1.0000/Sprite-Unlit-Default;Marker@23.9375,5.1250/Above/1/1.0000,0.8200,0.3000,1.0000/Sprite-Unlit-Default
+interactable|CalendarBoard|calendar.board|reach 1.0000|use 17.0000,3.1500|highlight none
 interactable|Grill|station.grill|reach 1.5000|use 20.8125,11.4250;21.5000,13.5000|highlight CornerBL@19.0000,11.8750/Above/0/1.0000,0.8200,0.3000,1.0000/Sprite-Unlit-Default;CornerBR@22.6250,11.8750/Above/0/1.0000,0.8200,0.3000,1.0000/Sprite-Unlit-Default;CornerTL@19.0000,15.2500/Above/0/1.0000,0.8200,0.3000,1.0000/Sprite-Unlit-Default;CornerTR@22.6250,15.2500/Above/0/1.0000,0.8200,0.3000,1.0000/Sprite-Unlit-Default;Marker@20.8125,15.3750/Above/1/1.0000,0.8200,0.3000,1.0000/Sprite-Unlit-Default
 interactable|Hatch|tavern.hatch|reach 1.0000|use 64.5000,3.8000|highlight none
 interactable|Inspect|surface.look.portrait|reach 1.0000|use 58.5000,9.4000|highlight none
@@ -101,6 +103,7 @@ sprite|Props_Barrel|25.2500,8.0000|rot 0.0000|scale 1.0000,1.0000|flip False,Fal
 sprite|Props_Barrel|26.2500,8.0000|rot 0.0000|scale 1.0000,1.0000|flip False,False|Characters/0|1.0000,1.0000,1.0000,1.0000|Sprite-Lit-Default|ungrouped
 sprite|Props_Barrel|26.2500,9.0000|rot 0.0000|scale 1.0000,1.0000|flip False,False|Characters/0|1.0000,1.0000,1.0000,1.0000|Sprite-Lit-Default|ungrouped
 sprite|Props_Cauldron|17.7500,11.5000|rot 0.0000|scale 1.0000,1.0000|flip False,False|Characters/1|1.0000,1.0000,1.0000,1.0000|Sprite-Lit-Default|group Characters/0@17.7500,11.5000
+sprite|Signage_NoticeBoard|17.0000,2.0500|rot 0.0000|scale 1.0000,1.0000|flip False,False|Characters/0|1.0000,1.0000,1.0000,1.0000|Sprite-Lit-Default|ungrouped
 sprite|TavernIndoor_props2_BarTop|1.7500,12.1250|rot 0.0000|scale 1.0000,1.0000|flip False,False|Characters/1|1.0000,1.0000,1.0000,1.0000|Sprite-Lit-Default|group Characters/0@1.5000,11.0000
 sprite|TavernIndoor_props2_Glasses|24.7500,15.0000|rot 0.0000|scale 1.0000,1.0000|flip False,False|Ground/4|1.0000,1.0000,1.0000,1.0000|Sprite-Lit-Default|ungrouped
 sprite|TavernIndoor_props2_ShelfGoods|2.7500,14.1250|rot 0.0000|scale 1.0000,1.0000|flip False,False|Ground/4|1.0000,1.0000,1.0000,1.0000|Sprite-Lit-Default|ungrouped

@@ -14,6 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Hearthdelve.Shared::Hearthdelve.Shared.Village.ScheduleDefinition
   character: ogrin
   blocks:
+  - from: 720
+    to: 780
+    anchor: ogrin.yard
+    activity: found_day
+    conditions:
+    - kind: 5
+      rule: 0
+      number: 0
+      id: birthday:ogrin
+      status: 
+      negate: 0
   - from: 480
     to: 1440
     anchor: ogrin.window

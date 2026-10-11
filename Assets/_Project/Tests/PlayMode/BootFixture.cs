@@ -189,7 +189,7 @@ namespace Hearthdelve.Tests.PlayMode
         /// 3). <paramref name="hold"/>: the clock held (released by <see cref="NextDay"/> and the teardown).
         /// </summary>
         protected IEnumerator StartDaytime(Func<int, VillageLifeSettings, bool> seed = null, OpeningStage opening = OpeningStage.Complete,
-            bool gimpSeen = false, bool hold = false)
+            bool gimpSeen = false, bool hold = false, int day = 2)
         {
             if (s_Day2 == null)
             {
@@ -207,6 +207,7 @@ namespace Hearthdelve.Tests.PlayMode
                 data.world.seed = Enumerable.Range(1, 100000).First(s => seed(s, settings));
             }
             else data.world.seed = DefaultSeed;
+            data.day = day;   // 5b: a calendar day to start on (the written save is day 2)
             data.story.openingStage = opening.ToString();
             data.story.openingComplete = opening == OpeningStage.Complete;
             if (gimpSeen && !data.story.seenHints.Contains(CommunityRules.GimpIntro)) data.story.seenHints.Add(CommunityRules.GimpIntro);
@@ -215,7 +216,7 @@ namespace Hearthdelve.Tests.PlayMode
             Assert.That(Flow.Continue(), "the day-2 save continues");
             yield return WaitUntil(() => InDaytimeNow, 30f, "the daytime");
             yield return Revealed();
-            Assert.That(Flow.State.Day, Is.EqualTo(2));
+            Assert.That(Flow.State.Day, Is.EqualTo(day));
             if (hold) SurfacePause.Hold(ClockHold);
             yield return Frames(3);
         }

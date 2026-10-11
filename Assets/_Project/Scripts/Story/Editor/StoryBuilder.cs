@@ -241,6 +241,7 @@ namespace Hearthdelve.Story.Editor
         public const string FelledLarderTroll = "felled_larder_troll";
         public const string KeptAWish = "kept_a_wish";
         public const string FineButchery = "fine_butchery";
+        public const string RememberedBirthday = "remembered_birthday";
 
         static List<DeedDefinition> Deeds()
         {
@@ -287,7 +288,14 @@ namespace Hearthdelve.Story.Editor
                 new SocialTraits(60f, 60f, 0f), impact: 10f, respect: 8f, memoryDays: 3, minimum: 0.9f);
             butchery.learnerIds = new[] { CharacterIds.Boog };
             EditorUtility.SetDirty(butchery);
-            return new List<DeedDefinition> { trophy, bomb, troll, wish, butchery };
+            // 5b: a birthday guest given their favourite on their birthday. Done for them, and only they learn of it; warmth. Made
+            // once per guest who dines on their birthday (Bart in 5b); tune it on the asset.
+            DeedDefinition birthday = Deed(RememberedBirthday, DeedSource.BirthdayRemembered, DeedTarget.Character, DeedLearners.Target,
+                new SocialTraits(0f, 0f, 80f), impact: 20f, respect: 5f, memoryDays: 0);
+            birthday.subject = CharacterIds.Bart;
+            birthday.character = CharacterIds.Bart;
+            EditorUtility.SetDirty(birthday);
+            return new List<DeedDefinition> { trophy, bomb, troll, wish, butchery, birthday };
         }
 
         /// <summary>A deed asset made once with these values (later runs set only its id, source, target and learners).</summary>

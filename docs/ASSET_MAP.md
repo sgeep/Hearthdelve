@@ -396,6 +396,10 @@ The village was relaid out once as the mockup's layout 2 (`KariastonBuilder.Rela
 
 **Superseded:** the Forgotten Plains dirt and stone autotiles and the 13 water `AnimatedTile`s (their slices stay registered; the tile assets are deleted), and the 72×48 layout below.
 
+## The calendar board (5b, imported)
+
+`MoreSignage/Signage` from All Exclusives › Addons › _Miscellany › *More Signage* `MoreSignage_signage.png` (632×192): **NoticeBoard** (24,131 16×18), a framed board hanging between two posts, in the first (brown) colourway; stands beside the menu board in Tally Ho!. The pack's shadow sheet and its other signposts are unused.
+
 ## Kariaston and Tally Ho!'s daytime places (4h Checkpoint A, imported)
 
 Registered in `Editor/Setup/KariastonSheets.cs` (rects in pixels from each image's top-left), imported to `Assets/ThirdParty/Minifantasy/<Pack>/`. Built into `Kariaston.unity` once by `KariastonBuilder` (the blockout is hand-owned after that) and into the tavern by `SurfaceBuilder`.

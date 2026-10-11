@@ -172,3 +172,32 @@ The one rule this creates: **`CalendarConfig`'s start date and month lengths are
 - **The HUD gets crowded.** The date line is short ("9 Thawing") and tested to fit; the board carries the rest.
 - **Festival lines go stale on repeat years.** The speech gets a second-year variant at most in 5b; later years reuse with small changes; Act II adds its own beats to the same day.
 - **Leaking the spine:** no year counts, no ages, no Glimmer or Bart's half-song before Act II (§6); the speech's drafts are checked against `STORY.md` §2.
+
+## Approved (2026-10-10)
+
+The owner approved the plan with every recommendation: **C1-B** (4 months of 14 days, a 56-day year), **C2-A** (7 named days), **C4-C** (a HUD line and the board), **C5-B** (Ogrin's found day, Orik, Bart), **C6-A** (Remembrance around day 10). **C3:** the drafts as placeholders, renamed by the owner in the string table later; names live only in the table, never in code or ids. **Ogrin's found day:** dialogue and the midday visit only (no plate carried to the cottage in 5b). **Favourites:** three dishes from the current menu. Before Checkpoint A ships, the first year's dates go to the owner (the start date and month lengths lock then). Build Checkpoint A, then stop for the playtest.
+
+## As built: Checkpoint A (2026-10-10)
+
+**The first year** (the start date and month lengths lock once this reaches players; names are the placeholders):
+
+| | Game day | Date |
+|---|---|---|
+| Arrival day | 1 | Firstday, 1 Thawing |
+| **Karias Remembrance Day** | **10** | Midweek, 10 Thawing |
+| **Ogrin's found day** | **20** | Lampday, 6 Highsun |
+| **Orik's birthday** | **37** | Marketday, 9 Emberfall |
+| **Bart's birthday** | **46** | Hearthday, 4 Deepfrost |
+| Year two begins | 57 | Firstday, 1 Thawing |
+| Remembrance, year two | 66 | Midweek, 10 Thawing |
+
+- **The calendar** (`Shared/Calendar`): `CalendarConfig` (`Data/Config/Calendar.asset`, made once; its start date and month lengths lock once shipped) and pure `CalendarRules` (dates, weekdays, festivals, birthdays, what's coming, a yearly beat); `GameCalendar` reads today from the day count. **No save change** (version 10): once-a-year things are recorded as `beat:<what>:<year>` in `StoryState.SeenHints`.
+- **The date** on its own tab under the clock ("2 Thawing"); the harvest note moved one tab down.
+- **The calendar board** beside the menu board in Tally Ho! (More Signage's framed board, cells 16–17 of the front row, reserved like the menu board's): today's long date and up to four things in the next fortnight, soonest first ("Karias Remembrance Day in 8 days", "Ogrin's found day, 6 Highsun"). Holds the clock while read; back, Esc or B closes it.
+- **Names** (months, weekdays, the festival) are added to the UI table only when missing (`LocalizationBuilder.AddMissing`), so the owner's renames survive every rebuild; formats and labels are generated as usual.
+- **Schedules:** a new condition kind (`Calendar`: `festival:<id>`, `birthday:<character>`); Ogrin is always well on his found day; his found-day midday (12:00–13:00): Ogrin in the yard, Grim beside him, Kaloren at the door, each with a happy face now and then (blocks added once to the hand-tuned schedules, never twice).
+- **Birthdays:** on the day, talking to the person plays their birthday conversation first, once a year (`Birthday/Ogrin|Orik|Bart`, first drafts for the node editor; C# decides when, the graph what; no hub was edited). **Bart** always comes to dinner on his birthday, orders **grilled spider leg** if it's on the menu, and it's a special request beyond the evening's cap; met, the deed `remembered_birthday` (warmth, only Bart learns of it). **Orik's** favourite is **Brackenford ale** and **Ogrin's** **eggs on toast**: named in their lines, with no meal for either in 5b.
+- **Lua:** `HH_Festival(id)`, `HH_DaysUntil(id)`, `HH_Birthday(id)`, `HH_Date()`.
+- **Deviation:** Orik works the evening, so his birthday is his line ("one ale tonight, an' i'll pour it myself") and the board, not a dinner; a night off as a guest needs his look as a patron (later, if wanted). Favourites are on the calendar's birthday entries rather than `CharacterDefinition` (the tavern reads the calendar, not the story's cast).
+- **Known:** a tester's saved layout with a piece on cells 16–17 of the front row would overlap the board (no error; the 4h menu board had the same exposure).
+- **Tests:** EditMode `CalendarTests` (dates and roll-over, Remembrance on day 10 and every 56 days, the first year's birthdays outside its month, what's coming, the yearly beat, Ogrin well on his found day, a birthday guest always at dinner, the names only in the table), the deed vocabulary and the tavern's baseline updated; PlayMode `CalendarPlayTests` (the HUD date and the board, Bart's birthday talk once and his dinner and favourite, Ogrin's found-day midday). Results: EditMode 847 passed, 0 failed (1 skipped); PlayMode 289 passed, 0 failed (31 explicit captures skipped), Slow included.

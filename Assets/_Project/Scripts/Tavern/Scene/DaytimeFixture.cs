@@ -67,6 +67,7 @@ namespace Hearthdelve.Tavern.Scene
             {
                 case TavernInteractableKind.Storeroom:
                 case TavernInteractableKind.MenuBoard:
+                case TavernInteractableKind.CalendarBoard:
                     EventBus<DaytimePlaceUsed>.Publish(new DaytimePlaceUsed(target.Kind));
                     break;
                 case TavernInteractableKind.Plans:

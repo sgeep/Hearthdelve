@@ -52,6 +52,8 @@ namespace Hearthdelve.Shared.Game
         [Tooltip("4h Checkpoint C: where each villager spends the surface day (broad authored beats).")]
         public List<Village.ScheduleDefinition> schedules = new();
         public Village.VillageLifeConfig villageLife;
+        [Tooltip("5b: the calendar (dates derived from the day count; festivals and birthdays).")]
+        public Calendar.CalendarConfig calendar;
 
         public FreshnessSettings Freshness => freshness != null ? freshness.freshness : FreshnessSettings.Default;
         public Surface.VigorSettings Vigor => vigor != null ? vigor.settings : Surface.VigorSettings.Default;

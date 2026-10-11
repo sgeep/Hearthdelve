@@ -13,6 +13,9 @@ Ambient/MaximoMusashi
 Ambient/MaximoOrik
 Ambient/MusashiBart
 Bart/Hub
+Birthday/Bart
+Birthday/Ogrin
+Birthday/Orik
 Boog/Bomb
 Boog/Hub
 Boog/Talk

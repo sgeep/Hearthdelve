@@ -1,4 +1,5 @@
 using Hearthdelve.Shared.Characters;
+using Hearthdelve.Shared.Game;
 using PixelCrushers.DialogueSystem;
 using UnityEngine;
 
@@ -35,8 +36,30 @@ namespace Hearthdelve.Story.Dialogue
         public bool Talk(string characterId)
         {
             if (IsTalking || !CanTalk(characterId)) return false;
+            // 5b: on their birthday, their birthday conversation comes first, once a year (C# decides when; the graph says what).
+            string birthday = BirthdayConversation(characterId);
+            if (birthday != null)
+            {
+                GameFlow.Instance.MarkHintSeen(Hearthdelve.Shared.Calendar.GameCalendar.YearlyBeat($"birthday:{characterId}"));
+                DialogueManager.StartConversation(birthday);
+                if (DialogueManager.isConversationActive) return true;
+            }
             DialogueManager.StartConversation(m_Cast.Definition(characterId).conversation);
             return DialogueManager.isConversationActive;
+        }
+
+        /// <summary>Their birthday conversation if today is their birthday and it hasn't played this year (and exists), else null.</summary>
+        static string BirthdayConversation(string characterId)
+        {
+            GameFlow flow = GameFlow.Instance;
+            if (flow == null || !flow.InGame) return null;
+            foreach (Hearthdelve.Shared.Calendar.CalendarBirthday b in Hearthdelve.Shared.Calendar.GameCalendar.Birthdays)
+            {
+                if (b.character != characterId || string.IsNullOrEmpty(b.conversation)) continue;
+                if (flow.State.Story.SeenHints.Contains(Hearthdelve.Shared.Calendar.GameCalendar.YearlyBeat($"birthday:{characterId}"))) return null;
+                return DialogueManager.masterDatabase != null && DialogueManager.masterDatabase.GetConversation(b.conversation) != null ? b.conversation : null;
+            }
+            return null;
         }
 
         System.Action m_Ended;

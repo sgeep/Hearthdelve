@@ -41,7 +41,7 @@ namespace Hearthdelve.Tests.PlayMode
         {
             yield return LoadServing();
             // The hatch too: in the keeper's room's floor since 2026-10-07 (the way down on arrival day, a look after).
-            var daytimePlaces = new[] { TavernInteractableKind.MenuBoard, TavernInteractableKind.Storeroom, TavernInteractableKind.Inspect, TavernInteractableKind.Hatch };
+            var daytimePlaces = new[] { TavernInteractableKind.MenuBoard, TavernInteractableKind.Storeroom, TavernInteractableKind.Inspect, TavernInteractableKind.Hatch, TavernInteractableKind.CalendarBoard };
             var all = Object.FindObjectsByType<TavernInteractable>().Select(s => s.Kind).ToList();
             var kinds = all.Where(k => k != TavernInteractableKind.Seat && k != TavernInteractableKind.Person && !daytimePlaces.Contains(k)).ToList();
             Assert.That(kinds, Is.EquivalentTo(new[] { TavernInteractableKind.Grill, TavernInteractableKind.Tap, TavernInteractableKind.StewPot, TavernInteractableKind.ButcherBlock, TavernInteractableKind.Pass }));

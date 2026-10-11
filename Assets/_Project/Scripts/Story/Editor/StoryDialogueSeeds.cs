@@ -66,6 +66,19 @@ namespace Hearthdelve.Story.Editor
             // 4h Checkpoint D: Gimp, and the village among themselves.
             new() { Title = StoryDialogue.GimpIntruder, Write = WriteGimpIntruder },
             new() { Title = StoryDialogue.GimpHub, Write = WriteGimpHub },
+            // 5b: birthdays (Ogrin's is his found day), played first when the keeper talks to them that day, once a year.
+            new() { Title = "Birthday/Ogrin", Write = (db, t, c, id) => WriteBirthday(db, t, c, id, "Birthday/Ogrin", c.Ogrin,
+                "5b: Ogrin's found day (Grim found him on this day). Played first when the keeper talks to him that day, once a year.",
+                new[] { "it's my found day! the day Grim found me.", "we're having cake. well, Grim calls it cake." },
+                "happy found day, Ogrin.", "you can come to the cake. it's mostly bread. i like it anyway.") },
+            new() { Title = "Birthday/Orik", Write = (db, t, c, id) => WriteBirthday(db, t, c, id, "Birthday/Orik", c.Orik,
+                "5b: Orik's birthday. Played first when the keeper talks to him that day, once a year.",
+                new[] { "aye, it's my birthday. dinnae tell Boog. he'll bake something." },
+                "happy birthday, Orik.", "...thank ye. one ale tonight, an' i'll pour it myself.") },
+            new() { Title = "Birthday/Bart", Write = (db, t, c, id) => WriteBirthday(db, t, c, id, "Birthday/Bart", c.Bart,
+                "5b: Bart's birthday. He comes to dinner tonight and asks for his favourite. Played first when the keeper talks to him that day, once a year.",
+                new[] { "well, darlin', it's my birthday. reckon i'll be in tonight." },
+                "happy birthday, Bart.", "if there's grilled spider leg on the board, i'll be the happiest orc in Kariaston.") },
         }.Concat(AmbientSeeds()).ToArray();
 
         // ---------- The writer ----------
@@ -533,6 +546,24 @@ namespace Hearthdelve.Story.Editor
         /// Something looked at (4h): one line in the voice of no one (the narration speaker: no name, no portrait). Seeded once, like
         /// every conversation; the node editor owns it from then on.
         /// </summary>
+        /// <summary>5b: a birthday: their lines, the keeper's wish, their answer.</summary>
+        static void WriteBirthday(DialogueDatabase db, Template template, Cast c, int id, string title, Actor who, string description, string[] lines,
+            string wish, string answer)
+        {
+            var w = new Writer(db, template, id, title, c.Player, who, description);
+            DialogueEntry last = w.Start;
+            for (int i = 0; i < lines.Length; i++)
+            {
+                DialogueEntry line = w.Npc(lines[i], 0, i + 1);
+                w.Link(last, line);
+                last = line;
+            }
+            DialogueEntry reply = w.Player(wish, 0, lines.Length + 1);
+            DialogueEntry end = w.Npc(answer, 0, lines.Length + 2);
+            w.Link(last, reply);
+            w.Link(reply, end);
+        }
+
         static void WriteLook(DialogueDatabase db, Template template, Cast c, int id, string title, string line)
         {
             var w = new Writer(db, template, id, title, c.Player, c.Narration,
