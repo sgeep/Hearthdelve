@@ -1,6 +1,6 @@
 # HEARTH & HOLLOWS — Project Design Document
 
-*Working title: **Hearth & Hollows** (renamed from Hearthdelve on 2026-10-05). Version 0.5, with 4f as built recorded 2026-10-06 (Section 11.1, Decided 28–34). The Kariaston cast added 2026-10-07 (Section 2.10, Decided 51). Version 0.5 (title and terminology pass, 2026-10-05: Hearth & Hollows, the Hollows, delves; village life-sim direction: daily loop, Kariaston's villagers and Visitors, the Inn, farming, ranching and fishing, the surface and dungeon ingredient model; Stronghold and defense direction dropped, 2026-10-04; learning priorities, tavern customization, decor rewards, worker customization, 2026-10-04; design philosophy, tavern immersion, quests and relationships in v0.3, 2026-10-03; top-down pivot in v0.2, 2026-10-02). Engine: Unity 6.6, moving to 6.7 LTS on release.*
+*Working title: **Hearth & Hollows** (renamed from Hearthdelve on 2026-10-05). Version 0.5, with 4f as built recorded 2026-10-06 (Section 11.1, Decided 28–34). The Kariaston cast added 2026-10-07 (Section 2.10, Decided 51). The story revised 2026-10-10 (Phase 5a: Sections 2.1, 2.4, 2.5, 2.9, 2.10, 6.4; Decided 65–76; the full bible in `docs/STORY.md`). Version 0.5 (title and terminology pass, 2026-10-05: Hearth & Hollows, the Hollows, delves; village life-sim direction: daily loop, Kariaston's villagers and Visitors, the Inn, farming, ranching and fishing, the surface and dungeon ingredient model; Stronghold and defense direction dropped, 2026-10-04; learning priorities, tavern customization, decor rewards, worker customization, 2026-10-04; design philosophy, tavern immersion, quests and relationships in v0.3, 2026-10-03; top-down pivot in v0.2, 2026-10-02). Engine: Unity 6.6, moving to 6.7 LTS on release.*
 
 > **About this version.** Version 0.1 described a side-scrolling game in the style of Dead Cells. On 2026-10-02 the game pivoted to top-down. Sections rewritten for the pivot are marked **(rewritten in v0.2)**; the text they replace is kept in [Appendix B](#appendix-b-superseded-v01-side-scroller-design) rather than deleted. Sections and lines added in v0.3 are marked **(added in v0.3)** or *(v0.3)*, those added in v0.4 **(added in v0.4)** or *(v0.4)*, and those added or rewritten in v0.5 **(added in v0.5)**, **(rewritten in v0.5)** or *(v0.5)*; they record design direction and do not widen any milestone's approved scope (the roadmap in Section 11.1 says what each milestone builds). Sections without a mark are unchanged from v0.1. Version 0.5 moves the game's identity toward a fantasy life sim centred on the tavern; the Stronghold direction and the old day order it replaces are kept in [Appendix C](#appendix-c-superseded-v04-stronghold-direction-and-day-order). Where this document and `CLAUDE.md` disagree, `CLAUDE.md` wins.
 >
@@ -140,7 +140,11 @@ The other rules still hold. "Meaningful complexity over system count" governs ev
 
 The world of **Aldmere** is a traditional high-fantasy continent: human kingdoms, dwarven holds carved into mountains, elven forests, orcish clans of the steppes, and wild borderlands between them. ~~Ages ago a civilization delved too deep and sealed what it found beneath the earth. Those seals are failing.~~ *(Superseded 2026-10-06 by the founding canon below.)*
 
-*(2026-10-06, locked; Decided 54)* **The sealing and the founding.** Long ago a source of evil opened beneath this region; an enormous force poured out of it into the surface world and caused a great war. **Karias**, a great wizard and once **Maximo**'s apprentice, gave his life to seal it, and Maximo was among those who performed the sealing. The seal held, but not perfectly: small remnants of what lies beyond still seep through, and those remnants are what people now call **the Hollows**. Afterwards Maximo founded **Kariaston**, named it for Karias, and vowed to watch over the Hollows for as long as he lives. People gathered around that watch: glory-seekers, fortune-seekers, people who supply delvers, ordinary settlers and, in time, a few friendly monsters and stranger neighbours, and all of them needed somewhere to drink. Kariaston exists because of the Hollows; they are the centre of its history. The game reveals this through people, places and partial stories, never as a cosmology lecture, and the full nature of the source and the seal is for the story revision (Section 2.9).
+*(2026-10-06, locked; Decided 54)* **The sealing and the founding.** Long ago a source of evil opened beneath this region; an enormous force poured out of it into the surface world and caused a great war. **Karias**, a great wizard and once **Maximo**'s apprentice, gave his life to seal it, and Maximo was among those who performed the sealing. The seal held, but not perfectly: small remnants of what lies beyond still seep through, and those remnants are what people now call **the Hollows**. Afterwards Maximo founded **Kariaston**, named it for Karias, and vowed to watch over the Hollows for as long as he lives. People gathered around that watch: glory-seekers, fortune-seekers, people who supply delvers, ordinary settlers and, in time, a few friendly monsters and stranger neighbours, and all of them needed somewhere to drink. Kariaston exists because of the Hollows; they are the centre of its history. The game reveals this through people, places and partial stories, never as a cosmology lecture, and the full nature of the source and the seal is revealed over Acts II–IV (Section 2.4).
+
+*(2026-10-10, Phase 5a, Decided 65–67; `docs/STORY.md` §2)* **What is true below** (the player learns it in pieces, never all at once). The source is **a wound** in the world, with a black, rooted heart and a will of a kind: it wants out and whispers to the ambitious. The ones who fought down to it were **the old party**: Maximo, his apprentice **Karias** (a half-elf), **Gimp** and **Boog**, and others the story can name later, sworn together to hold the line. Near the end the war's darkness got into Gimp and he turned on them; Maximo handed him over to be judged, and Gimp missed the end. At the heart **Karias built a structure around the wound out of his own magic and put himself into it**, with fey spirits woven into its wards; that structure is why the deep feels built, and the Hollows are what still seeps through. **The binding:** everyone sworn to the seal stopped ageing while it holds (Maximo, Gimp, Boog), and none of them can go far below without loosening it, which is why Maximo cannot go back. Alone in the seal for centuries, Karias slowly went wrong: he is **the Warden Below**. The sealing was about three and a half centuries ago.
+
+*(2026-10-10)* **How far the Hollows reach:** they are local, the seepage of the one wound beneath this region; there are no other openings across Aldmere (the region's old sealed shafts can be rumour).
 
 **The Hollows** are the underground world beneath Kariaston, and they are not ordinary caves. They are a living, shifting underworld that rearranges itself (justifying procedural layouts), reaching down through distinct regions from the old cellars under the village to the Heart at the bottom (Section 4.6). The Hollows grow outward and upward over time, and monsters from their depths are beginning to emerge onto the surface *(2026-10-06: read as the seal's imperfection, what still seeps through)*. Villagers have their own stories about the Hollows, and some may have their own superstitions or slang for the different depths.
 
@@ -158,19 +162,17 @@ A retired (or reluctant) adventurer who has taken over the tavern. The protagoni
 
 *(v0.2)* Customization is limited by the art: the player picks a body and recolours skin, hair and outfit through palette swaps. Layered outfits are not possible, because Minifantasy has no clothing or hair layers for attack animations.
 
-### 2.4 Story Arc
+### 2.4 Story Arc (rewritten 2026-10-10, Phase 5a)
 
-> **(v0.5) Awaiting story revision.** The four acts below were written for the Sanctuary-to-Stronghold direction, which v0.5 drops. They are kept unchanged so no story material is silently lost, but Acts II–IV conflict with the village life-sim direction in places (refugees and a wall, a fortified Stronghold, a world war footing, "the whole stronghold rallies"). The conflicts are listed in Section 2.9; revising the acts is a story decision for the owner. Act I fits the new direction as written.
+The story unfolds in four acts, advanced by **depth** (each act's last boss) and by **people** (Inn guests, residents, key relationships and personal beats), never by a date; nothing story-critical is missable. The beat outlines, the cast across the acts and the Phase 5 mapping are in `docs/STORY.md`; the superseded Sanctuary and Stronghold acts are in Appendix C.
 
-The story unfolds in four acts, advanced by reaching new depths of the Hollows and by tavern milestones (renown, sanctuary capacity).
+**Act I — The Inn (Biome 1, the Cellars; as built).** The keeper inherits Tally Ho! by Phi's letter, learns to cook what the Hollows give, fells the Larder Troll, brings back Boog's Bomb, meets Kariaston's people and, one night, Gimp through the hatch.
 
-**Act I — The Inn (Biomes 1–2).** Bram inherits Tally Ho! from a mentor who vanished in the Hollows. Business is slow. A wandering goblin cook teaches Bram that monster meat, prepared right, is delicious. The first customers are adventurers and curious villagers. Hooks: the mentor's disappearance, strange carvings on the walls of the Hollows.
+**Act II — The Warrens (Biomes 2–3).** Below the Cellars the Hollows look *made*. Glimmer speaks through Ogrin, then to the keeper; a drow is seen below; the first Karias Remembrance Day; Boog's past in the Goblin Sprawl (the Goblin King). The Inn opens: Ser Aldric and Sylvaris arrive, then Phi's son, waiting for his mother. The first settlers.
 
-**Act II — The Sanctuary (Biomes 3–4).** Travelers bring news: other openings into the deep have appeared across Aldmere. Monsters raid nearby farms. Refugees begin arriving at the tavern looking for food and safety. Bram expands the inn into a sanctuary with rooms, a wall, and space for newcomers. Some refugees have skills and join the tavern's workforce. The player learns these openings all lead down into the Hollows, which run beneath the world.
+**Act III — The Halls (Biomes 4–5).** Orik's kin's drowned hold; **Phi's hammer**, found broken on a later floor; the betrayer's trail and one ghost night inside Tally Ho!; Grukka comes for the Ember Forge's metal. **Phi is found alive**, held by the Warden in a still place outside time, and brought home. The truth that the Warden is Karias reaches Maximo; Gimp and Maximo have it out.
 
-**Act III — The Stronghold (Biomes 5–6).** A neighboring kingdom falls. The tavern becomes one of the last safe places on the frontier. Soldiers, a disgraced knight, an elven scout and an orc warband arrive, uneasy allies. The tavern is fortified. Patrons now watch Bram's delves with hope; their morale becomes a mechanical force (see Section 6.4). Bram discovers what happened to his mentor.
-
-**Act IV — The Champion (Biome 7 and the Heart).** The source of what stirs in the Hollows is revealed at their deepest point beneath Kariaston. The whole stronghold rallies. A final descent culminates in a boss fight, with the people Bram fed and sheltered providing direct support. Post-game: endless/ascension mode and "legendary" ingredients.
+**Act IV — The Heart (Biome 6, Biome 7 and the Heart).** In the Frostvault, the first ward, a lucid fragment of Karias tells the keeper the seal needn't take a life. Glimmer leaves Ogrin and anchors in Phi's hammer; Ogrin grows again and calls Grim **Dad**. The village gathers for a feast, and its bond (Morale) renews the seal through the keeper. At the Heart the betrayer takes the wound's power and is taken by it: the final boss. Karias is let go; the old party begins to age; Maximo goes below once to say goodbye. Post-game: the Hollows remain, quieter; delving and village life go on.
 
 ### 2.5 Key Characters (Draft)
 
@@ -180,14 +182,16 @@ The story unfolds in four acts, advanced by reaching new depths of the Hollows a
 | **Boog** (goblin) | Head cook and mentor for cooking mechanics; gruff, obsessed with flavor |
 | **Orik** (dwarf) | Server, bartender and bookkeeper; runs the floor during service. Phi's old friend: ran Tally Ho! in her absence, left when the Hollows grew too dangerous, and was sought out and rehired when she returned *(renamed 2026-10-06: formerly Pip Marrowby, a halfling; history 2026-10-07)* |
 | **Old Phi** (Phi'rai, a drow) | Former proprietor of Tally Ho! and the keeper's mentor, vanished in the Hollows; central mystery. Once an adventurer of the **Fortunate Five**, she helped rebuild Tally Ho!, left for many years, and came back decades later to settle down and run it *(renamed 2026-10-07: formerly Old Tamsin; Section 2.10)* |
-| **Ser Aldric Vane** | Disgraced knight who arrives in Act II; unlocks weapon training |
-| **Sylvaris** (elf) | Herbalist and scout; unlocks herb garden and brewing depth *(v0.5: a natural fit for farming; Section 2.9)* |
-| **Grukka Stonejaw** (orc) | Warband chief; blacksmith and fortification builder *(v0.5: the fortification role no longer has a home; Section 2.9)* |
-| **The Warden Below** | The intelligence behind the Hollows; antagonist *(2026-10-06: to be reconciled with the sealing canon, Section 2.1: perhaps what lies beyond the seal)* |
-| **Maximo** (human) | *(2026-10-07; history locked 2026-10-06)* The founder and mayor of Kariaston and its watchman over the Hollows: helped seal the source of evil his apprentice Karias died sealing, named the village for him, and will not (probably cannot) go back below; a theatrical, heroic, Don Quixote-like eccentric (Section 2.10) |
+| **Ser Aldric Vane** | Disgraced knight who arrives in Act II as an Inn guest wanting to go below to redeem himself; weapon training *(2026-10-10)* |
+| **Sylvaris** (elf) | Herbalist and scout who comes in Act II for the Warrens' herbs: foraging and brewing depth *(2026-10-10: Grim is the garden's mentor)* |
+| **Grukka Stonejaw** (orc) | A smith who comes in Act III for the Ember Forge's metal and stays as Kariaston's blacksmith; no warband, no fortifications *(2026-10-10)* |
+| **The Warden Below** | Karias, become the seal's keeper over three centuries alone: shifts the Hollows to turn delvers back and holds trespassers; a tragic figure, let go at the end *(2026-10-10, Decided 66)* |
+| **[The betrayer]** (drow) | The exile who drove Phi from her homeland, drawn here by the wound's whisper; taken by the wound at the Heart, the final boss *(2026-10-10; his name is open)* |
+| **Phi's son** (drow) | Comes to the Inn in Act II looking for his mother *(2026-10-10; his name is open)* |
+| **Maximo** (human) | *(2026-10-07; history locked 2026-10-06)* The founder and mayor of Kariaston and its watchman over the Hollows: helped seal the source of evil his apprentice Karias died sealing, named the village for him, and cannot go back below (the binding, Section 2.1); a theatrical, heroic, Don Quixote-like eccentric (Section 2.10) |
 | **Kaloren Frosthand** (lich) | *(2026-10-07)* A kind wizard and villager, secretly a lich made in the Hollows; his phylactery is still below. Brings Ogrin herbs every third day (Section 2.10) |
 | **Grim** (dwarf) and **Ogrin** | *(2026-10-07; history locked 2026-10-06)* Grim, a former delver and the market's keeper, found Ogrin as an infant in the Hollows and raised him; Ogrin looks human, aged impossibly fast, then stopped, and is chronically ill (Section 2.10) |
-| **Bart** (orc) | *(2026-10-07)* A villager and bard (Section 2.10) |
+| **Bart** (orc) | *(2026-10-07)* A villager and bard; one of the Fortunate Five, who stayed *(2026-10-10)* (Section 2.10) |
 | **Gimp** (half-elf) | *(2026-10-07; locked 2026-10-06)* A Hollower: a nomadic, abrasive hunter and ranger who loves rifles and explosives, likes almost no one but Boog (and Phi), and comes up to Tally Ho! when he feels like it (Section 2.10) |
 | **Glimmer** (fey spirit) | *(2026-10-07)* A Hollower: a whimsical spirit, once a guardian of the Hollows' seal, who has forgotten her past (Section 2.10) |
 
@@ -267,20 +271,20 @@ The path is: **ordinary transient Visitor → potentially interesting Visitor �
 
 ### 2.9 Story Conflicts from the v0.5 Direction (added in v0.5)
 
-The village direction leaves parts of the story written for the Stronghold direction without a home. Nothing has been deleted: these are for the owner to revise.
+The village direction leaves parts of the story written for the Stronghold direction without a home. Nothing has been deleted: these are for the owner to revise. **Resolved 2026-10-10** by the Phase 5a revision (`docs/STORY.md` §6), each in brief below.
 
-1. **Act II, the Sanctuary.** Refugees arriving for food and safety, and the inn expanding into "a sanctuary with rooms, a wall, and space for newcomers". Guest rooms survive as the Inn (Section 6.8) and newcomers can become Visitors and residents (Section 6A.5), but the wall, and refugees as the main way people arrive, belong to the old direction.
-2. **Act III, the Stronghold.** A neighbouring kingdom falls, the tavern becomes "one of the last safe places on the frontier", soldiers and an orc warband arrive, and "the tavern is fortified". The fortification and war-footing premise is gone; the act needs a new shape.
-3. **Act IV, the Champion.** "The whole stronghold rallies" and the people Bram sheltered support the final descent. The idea of a community rallying behind Bram survives (it is what Morale and Cheer express, Section 6.4) but the stronghold framing does not, and the elevator pitch's "rallying point of a world looking for a champion" is a larger, more martial scale than a village life sim.
-4. **Story gating.** Acts advance by depth in the Hollows and by "tavern milestones (renown, sanctuary capacity)". Sanctuary capacity no longer exists; village and inn milestones (residents settled, Inn rooms, relationships) are candidates.
-5. **The surface threat.** Monsters raiding farms and the Hollows' creatures spilling onto the surface gave the Stronghold its purpose. Some surface stakes may still be useful, but escalating surface danger pulls against "cozy on the surface, dread below" (pillar 4). Decide how much of the menace reaches the village.
-6. **Grukka Stonejaw** is "warband chief; blacksmith and fortification builder" and arrives with a warband in Act III. The blacksmith survives; the fortification role and the warband arrival need revision.
-7. **Ser Aldric Vane** arrives in Act II (weapon training). Compatible, but his arrival was framed by the sanctuary.
-8. **Sylvaris** unlocks the herb garden; farming (Section 6A.2) may make Sylvaris its natural mentor, or a garden may now come earlier than Sylvaris.
-9. **Canonical characters and the village.** It is undecided which canonical characters are Kariaston villagers from the start and which arrive later, and whether a late arrival uses one of the three empty plots (which would reduce the player's influence over who settles there).
-10. **Rescued NPCs and refugee staff.** "Rescued NPCs join the tavern" and "refugee staff unlock new dungeon abilities" (Section 3.3) relied on refugees; people rescued in the Hollows could instead become Visitors or resident candidates.
-11. **Customer types.** "Refugees, and eventually soldiers and heroes" as customer tiers (Section 6.3) came from the war arc.
-12. **How far the Hollows reach** *(2026-10-05)*. The Hollows are the world beneath Kariaston, but Act II's news of "other dungeons" opening across Aldmere, "connected beneath the world", is now worded as other openings that all lead into the Hollows. Whether the Hollows run beneath all of Aldmere or are local to Kariaston, and whether those other openings stay in the story at all, is for the story revision.
+1. **Act II, the Sanctuary.** Refugees arriving for food and safety, and the inn expanding into "a sanctuary with rooms, a wall, and space for newcomers". Guest rooms survive as the Inn (Section 6.8) and newcomers can become Visitors and residents (Section 6A.5), but the wall, and refugees as the main way people arrive, belong to the old direction. *Resolved (2026-10-10): Newcomers come as Inn guests and settlers; no wall.*
+2. **Act III, the Stronghold.** A neighbouring kingdom falls, the tavern becomes "one of the last safe places on the frontier", soldiers and an orc warband arrive, and "the tavern is fortified". The fortification and war-footing premise is gone; the act needs a new shape. *Resolved (2026-10-10): Act III is the old dwarven depths, Phi's rescue and the founders' reckoning; the only attack is one ghost night inside Tally Ho!.*
+3. **Act IV, the Champion.** "The whole stronghold rallies" and the people Bram sheltered support the final descent. The idea of a community rallying behind Bram survives (it is what Morale and Cheer express, Section 6.4) but the stronghold framing does not, and the elevator pitch's "rallying point of a world looking for a champion" is a larger, more martial scale than a village life sim. *Resolved (2026-10-10): The village gathers for a feast and its bond renews the seal; a region's scale, not a world's.*
+4. **Story gating.** Acts advance by depth in the Hollows and by "tavern milestones (renown, sanctuary capacity)". Sanctuary capacity no longer exists; village and inn milestones (residents settled, Inn rooms, relationships) are candidates. *Resolved (2026-10-10): Depth and people (Inn guests, residents, relationships, personal beats); never a date.*
+5. **The surface threat.** Monsters raiding farms and the Hollows' creatures spilling onto the surface gave the Stronghold its purpose. Some surface stakes may still be useful, but escalating surface danger pulls against "cozy on the surface, dread below" (pillar 4). Decide how much of the menace reaches the village. *Resolved (2026-10-10): Personal strange events only (the ghost night, failing herbs, Ogrin's bad days); no raids or sieges.*
+6. **Grukka Stonejaw** is "warband chief; blacksmith and fortification builder" and arrives with a warband in Act III. The blacksmith survives; the fortification role and the warband arrival need revision. *Resolved (2026-10-10): The smith who comes for the Ember Forge's metal and stays.*
+7. **Ser Aldric Vane** arrives in Act II (weapon training). Compatible, but his arrival was framed by the sanctuary. *Resolved (2026-10-10): Arrives in Act II as an Inn guest.*
+8. **Sylvaris** unlocks the herb garden; farming (Section 6A.2) may make Sylvaris its natural mentor, or a garden may now come earlier than Sylvaris. *Resolved (2026-10-10): Grim mentors the garden; Sylvaris brings foraging and brewing.*
+9. **Canonical characters and the village.** It is undecided which canonical characters are Kariaston villagers from the start and which arrive later, and whether a late arrival uses one of the three empty plots (which would reduce the player's influence over who settles there). *Resolved (2026-10-10): The 4h cast lives in Kariaston from the start; canonical late arrivals never take the three plots.*
+10. **Rescued NPCs and refugee staff.** "Rescued NPCs join the tavern" and "refugee staff unlock new dungeon abilities" (Section 3.3) relied on refugees; people rescued in the Hollows could instead become Visitors or resident candidates. *Resolved (2026-10-10): People brought up from below can become Visitors and resident candidates; staff from them stays open.*
+11. **Customer types.** "Refugees, and eventually soldiers and heroes" as customer tiers (Section 6.3) came from the war arc. *Resolved (2026-10-10): Villagers, Visitors (travellers, delvers, pilgrims), later Hollowers and people from below.*
+12. **How far the Hollows reach** *(2026-10-05)*. The Hollows are the world beneath Kariaston, but Act II's news of "other dungeons" opening across Aldmere, "connected beneath the world", is now worded as other openings that all lead into the Hollows. Whether the Hollows run beneath all of Aldmere or are local to Kariaston, and whether those other openings stay in the story at all, is for the story revision. *Resolved (2026-10-10): Local to the region; the other openings are dropped.*
 
 ### 2.10 The Kariaston Cast (added 2026-10-07)
 
@@ -296,6 +300,7 @@ The owner's call on 2026-10-07 (Decided 51): seven people join the cast, five wh
 - *Owner's concept:* became a lich in the Hollows, somehow regained his memories and left; his phylactery is still down there. Despite this he is a nice, kind person.
 - *Proposed:* a gentle, courteous scholar who is slightly too cold to the touch, wears gloves in summer, and never eats at the tavern (he orders, and admires the plate). The comedy is in near misses: he forgets to breathe in conversation, knows a little too much about how the Cellars were built. The warmth is real: he chose to come back up and be a neighbour.
 - **Locked (2026-10-06):** he brings Ogrin herbs that ease his symptoms, **once every three days**; they relieve, never cure. In 4h this is a small routine the player may witness (tower → the cottage → on with his day). Not connected to his lichdom.
+- **Decided (2026-10-10, Phase 5a):** unconnected to the Fortunate Five; his secret is how and where the Hollows made him a lich, and the phylactery below (proposed: his own questline, ending in the Frostvault).
 - *Hooks:* the phylactery is the obvious long quest (a quest object deep in the Hollows; whether the keeper returns it, hides it, or something else is the owner's story decision). He is living proof that the Hollows can change a person and that the change can be survived, which matters to anyone wondering what happened to Old Phi.
 
 **Maximo** (an elderly human, the founder and mayor of Kariaston; he).
@@ -304,12 +309,14 @@ The owner's call on 2026-10-07 (Decided 51): seven people join the cast, five wh
 - *From the campaign notes (Campaign 3), kept as personality DNA only:* a tanner's son (Tannerman's Tannery) raised on the adventure stories of Rayford Goodfallow; imagines himself the hero of the tale; grand, sincere speeches ("my words of boundless wisdom"); rousing and very rude songs; mentored Karias, "an eager young wizard who held his staff like a wish come true". The campaign's chronology (adventuring only from his late fifties) does not apply.
 - *Proposed:* proclamations, ceremonies and a heroic song for every small civic event, genuine courage about everything except the hatch at Tally Ho!. A delver living under his village is the thing he most admires and most fears; he may treat the keeper as a fellow watchman, which is both funny and sad.
 - *Hooks:* what is left of Karias, and of the seal, below; why Maximo cannot go back.
+- **Decided (2026-10-10, Phase 5a):** he cannot go back because of **the binding** (Section 2.1): he hasn't aged since the sealing, about three and a half centuries ago, and going far below would loosen the seal. He learns in Act III that the Warden Below is Karias; in Act IV he goes below once, to say goodbye, and comes home to grow old. **Maximo's creed**, the words a being of light once gave him, is Kariaston's founding principle: *look to others as allies; do not judge a book by its cover; save as many as you can* (who gave it is open).
 
 **Grim and Ogrin** (a dwarf, Grim, he; and Ogrin, he).
 - **Locked (2026-10-06, Decided 55):** Grim is a dwarf and a **former delver**. On a delve into the Hollows he found a human-looking infant, alive, beside two dead adults he assumes were the parents, and brought him home to Kariaston and raised him: Ogrin. Ogrin aged impossibly fast (to about ten in a year or two), then the ageing stopped abruptly; since then he has been chronically ill, with bouts of severe exhaustion. Grim doesn't know what Ogrin is, why he aged so, or what happened below; he loves him deeply. Ogrin calls him **Grim**; a later beat where Ogrin first calls him **Dad** is reserved and never spent casually. Ogrin is central to Glimmer's questline (below).
 - *Superseded (2026-10-07, Decided 61):* Grim ran the market stall (H7, 2026-10-06); **Musashi** keeps it now. Grim was one of **the Fortunate Five** with Phi and Musashi. What Grim does for a living now is open (Open 12).
 - *Proposed:* Grim is gruff, fair and practical, has a dry warmth he hides and a delver's unromantic knowledge of the Hollows. Ogrin is bright, curious and opinionated: he draws maps of the Hollows from what he overhears, collects the keeper's stories, loves Bart's songs and Boog's explosions from a distance, hates onion broth and being called brave or fragile; good days at the stall, bad days at his window. The relationship with Bram grows through care, not deeds of nerve.
 - *Hooks:* what Ogrin is and what happened below; Glimmer.
+- **Decided (2026-10-10, Phase 5a):** Ogrin's origin stays as locked (no birth name to find); proposed: Grim found him on his last delve, about eight years ago. **Grim is Kariaston's grower** and the garden's mentor (his livelihood). When Glimmer leaves Ogrin (Act IV) he grows again, and the reserved **Dad** beat lands then.
 
 **Musashi** (an elf; he) *(the owner's canon, 2026-10-07, Decided 61)*.
 - **Locked:** Musashi keeps the **Kariaston market** (the cart in the square, where he stands). An old friend of Phi's, Grim's and Orik's, and one of **the Fortunate Five**, Phi and Grim's adventuring party. He always loved cooking, and lost his sense of taste to a curse from the Hollows; now he sells ingredients in the hope that others will make good things with them, even if he can't taste them. His brother **Toshi** is missing in the Hollows; finding him will be a quest (later).
@@ -320,6 +327,7 @@ The owner's call on 2026-10-07 (Decided 51): seven people join the cast, five wh
 
 **Bart** (an orc bard; he).
 - *Owner's concept:* an orc bard.
+- **Decided (2026-10-10, Phase 5a):** **one of the Fortunate Five**: he came with them and stayed when they split (amending "the first Visitor who stayed"); Musashi doesn't name him because Bart asked. About forty years on he's old for an orc (proposed: drawn grey-whiskered when his look is next touched).
 - **Locked (2026-10-07, the Checkpoint C brief):** **the first Visitor who stayed**: he came through Kariaston years ago, performed, and never really left; he lives in the **painted wagon on the green**. Where Maximo mythologizes heroes, Bart is interested in ordinary people, gossip, songs and stories. Voice: southern Texas, in vocabulary and cadence, never misspelling.
 - *Proposed:* plays in Tally Ho! some evenings, which gives the room music, a regular face and a running joke: his repertoire versus Maximo's songs (the mayor considers himself a fellow artist; Bart considers him a fan). A bard is also the village's news, gossip and rumor-carrier, a natural voice for barks about the keeper's deeds without adding a rumor system.
 - *Hooks:* whether he can play during service (a live-music decor or Renown effect is a later question, not a rule).
@@ -332,6 +340,7 @@ The owner's call on 2026-10-07 (Decided 51): seven people join the cast, five wh
 #### Hollowers
 
 **Gimp** (a half-elf, lives in and around the Hollows; he). *(4h Checkpoint D, the owner's approved revision: his first meeting with the keeper is in the keeper's bedroom at night, through the hatch, by his old arrangement with Phi; afterwards irregular afternoon visits to Boog. He openly detests Maximo; why is an open story question, Section 13 Open 12.)*
+- **Decided (2026-10-10, Phase 5a):** Gimp was one of **the old party**. The war's darkness got into him and he turned on them; Maximo handed him over to be judged, and he missed Karias's end (the grudge he admits); and he blames Maximo for letting Karias go into the seal (the wound under it). Bound to the seal like Maximo and Boog (proposed: by the oath the party swore before the last descent, though he was locked away); he lives near the Hollows because the darkness that touched him is at home there, and to stay near what's left of Karias.
 - **Locked (2026-10-06, Decided 56):** a **half-elf** hunter and ranger; nomadic, abrasive, something of a nutjob; dislikes most people and hates cities; loves guns, rifles above all. The exceptions are **Boog** (their shared enthusiasm for dangerous explosives) and **Phi** (he knew and liked her, which, since he likes almost no one, quietly says something about her). He starts **standoffish toward Bram** and does not warm up because Bram is the protagonist. He lives in or around the Hollows but is extremely nomadic: below for a while, in the forest or up a tree, gone for stretches, out of the area entirely, back to see Boog. **World figure (locked): `soldier_headband`** (Minifantasy *Modern Soldiers*, All Exclusives › Creatures); his portrait is a half-elf treatment, not a human recipe.
 - *From the campaign notes, as energy only:* a scout who ranged ahead and turned up later, carried gunpowder, once came back wearing a crow cape, had a heart to heart with Boog.
 - *Proposed (4h):* his visits feel irregular ("Gimp shows up when Gimp shows up"); he climbs out of the cellar hatch, sits at the bar with Boog arguing blast radii, treats the keeper as an unwanted complication, and leaves the way he came. The smallest test of *encounter → recurring visitor*.
@@ -340,7 +349,8 @@ The owner's call on 2026-10-07 (Decided 51): seven people join the cast, five wh
 **Glimmer** (a fey spirit; she).
 - *Owner's concept:* came from the Hollows. She was a guardian meant to seal the Hollows, failed, and has forgotten her past. Whimsical, in the manner of Syl from *The Stormlight Archive*. She eventually has a questline in which she heals and fuses with Ogrin.
 - *Proposed:* a small light with opinions: curious about everything, easily distracted, delighted by words she has just learned, and suddenly, briefly ancient when something in the Hollows reminds her of what she was. She fits Section 2.1's sealing: she was a guardian meant to help seal or guard against what lies beyond, and failed *(how that relates to Maximo and Karias's sealing, which held, is open: Section 2.10 question 8)*. Her questline (Phase 5 or later): the keeper helps her remember; the bond with Ogrin heals him and makes her whole, at a cost the story decides.
-- *Reading taken (to confirm):* "heal and fuse with Ogrin" is read as one act, a bond in which Glimmer heals Ogrin and is herself restored by it, much as Syl and Kaladin's bond restores Syl.
+- ~~*Reading taken (to confirm):* "heal and fuse with Ogrin" is read as one act, a bond in which Glimmer heals Ogrin and is herself restored by it.~~ *Superseded 2026-10-10.*
+- **Decided (2026-10-10, Phase 5a):** Glimmer is one of the fey spirits Karias wove into the seal's wards; she slipped out, damaged and forgetful, into the newborn Ogrin, which is why he grew ten years in two and why he's ill. In Act IV she makes **Phi's hammer** (found broken in Act III) her new anchor, so Ogrin can live without her.
 
 #### Old Phi (renamed 2026-10-07)
 
@@ -349,7 +359,8 @@ The owner's call on 2026-10-07 (Decided 51): seven people join the cast, five wh
 - *As built:* nine days before the keeper arrives she went down into the Hollows, "a week at most"; her letter leaves Tally Ho! to the keeper; Orik's three lines tell their history if asked; she let Boog keep his bomb; she went after the Larder Troll twice and wouldn't say why. No stable id ever named her (there was no character asset); 4h's plan gives her the story id `phi` for things said about her.
 - *Proposed:* since she's missing, her stories reach the player through others: Orik's ledger and his memory of her, Boog's kitchen lore, and things she left in Tally Ho! (a curio from the Five, a letter, a carving). A drow is long-lived, so "decades" sits easily: she rebuilt Tally Ho! young, by drow reckoning, and came back still able to delve.
 - **Approved (2026-10-06):** a framed portrait of Phi'rai hangs in Tally Ho! (a Portrait Generator drow), making her present in the room without explaining her disappearance.
-- *Questions:* who the other four of the Fortunate Five were, and whether any of them are in Kariaston now (Kaloren, ageless as a lich, would be the natural candidate; Maximo only if his late-life adventuring overlapped hers), or whether one of them is what she went down after.
+- **Decided (2026-10-10, Phase 5a):** a drow paladin exiled from her homeland after she tried to stop a drow performing forbidden rituals (everyone with her died; he fled and she was blamed); she has a son there. That drow, **[the betrayer]**, came here for the wound; she recognised his work below, went after him, and he broke her **hammer**; the Warden took her for a trespasser and holds her, alive, outside time. Found in Act III. The Five delved about forty years ago: Phi, Grim, Musashi, Bart and a fifth (open). Her son comes to the Inn in Act II.
+- *Questions (before 2026-10-10):* who the other four of the Fortunate Five were, and whether any of them are in Kariaston now (Kaloren, ageless as a lich, would be the natural candidate; Maximo only if his late-life adventuring overlapped hers), or whether one of them is what she went down after.
 
 #### Through-lines (proposed, for the owner)
 
@@ -360,14 +371,14 @@ The owner's call on 2026-10-07 (Decided 51): seven people join the cast, five wh
 
 #### Questions for the owner (also in Section 13, Open 12)
 
-1. ~~**When Kariaston got its name.**~~ *Answered 2026-10-06:* Maximo founded it after the sealing (Decided 54). **Still open:** how long ago the sealing was, and so Maximo's age. Orik's built line ("my family went down for three hundred years") implies at least three centuries, which makes Maximo, a human, extraordinarily old: tied to the future decision about why he can't go back.
-2. **Karias: elf or half-elf.** The campaign notes say half-elf; the brief says elf. These docs say elf until told otherwise.
+1. ~~**When Kariaston got its name.**~~ *Answered 2026-10-06:* Maximo founded it after the sealing (Decided 54). ~~**Still open:** how long ago the sealing was, and so Maximo's age.~~ *Answered 2026-10-10:* about three and a half centuries; the binding (Decided 67). Orik's built line ("my family went down for three hundred years") implies at least three centuries, which makes Maximo, a human, extraordinarily old: tied to the future decision about why he can't go back.
+2. ~~**Karias: elf or half-elf.**~~ *Answered 2026-10-10:* a half-elf (Decided 67).
 3. **A secret lich among neighbourly liches.** Section 2.8 makes skeletons and liches ordinary neighbours, so Kaloren's secret can't simply be "I'm a lich". Recommended: what he hides is where and how he became one (the Hollows made him) and that his phylactery is still below; whether other villagers know is the owner's call.
-4. **Glimmer and the Warden Below.** A failed guardian of the seal and an antagonist called "the Warden" overlap in role and name. Are they the same order, enemies, or is "Warden" due for a rename?
+4. ~~**Glimmer and the Warden Below.**~~ *Answered 2026-10-10:* the Warden is Karias; Glimmer one of the fey he wove into the seal (Decided 66, 70).
 5. **Names that sit close together.** **Bart** and **Bram** (the keeper's default name) differ by two letters; **Grim** and **Gimp** by one; **Orik** and **Ogrin** share a shape. All are kept as given; flagged only because they will sit side by side in dialogue.
 6. ~~**Gimp's kind.**~~ *Answered 2026-10-06:* a half-elf (Decided 56).
 7. **Firearms.** In the campaign Boog carries a pistol and Gimp buys bullets and gunpowder. *(2026-10-06: Gimp now loves guns, rifles above all, and his figure carries a rifle.)* Recommended: rifles exist as rare personal property of odd people like Gimp (seen and talked about), never a player weapon in this phase. Needed before 4h Checkpoint D.
-8. **Glimmer and the sealing.** Glimmer was a guardian meant to help seal or protect against the Hollows, and failed; Maximo's sealing held. Same event, an earlier attempt, or a different guard? (Also question 4.)
+8. ~~**Glimmer and the sealing.**~~ *Answered 2026-10-10:* the same sealing; she was in its wards (Decided 70).
 
 ---
 
@@ -688,7 +699,7 @@ Growth areas, none of them locked as stages or tied to particular acts yet:
 
 **Residents and staff.** *(v0.5, revised)* The people who live in the village are named villagers and recruited residents (Section 2.8); the people who work in the tavern are staff (Section 6.7). Whether recruited villagers can become employees, and whether Visitors are a natural recruitment source for staff, are open cross-system questions (Section 13). Selected residents carry personal questlines (Section 2.6) and relationship state (Section 2.7). *(The v0.2 refugee residents with roles such as gardener, smith and guard are in Appendix C.)*
 
-**Morale and Cheer** *(v0.5, reinterpreted; to confirm)*. Morale is the state of the **village community** as a whole, driven by things like how well the village eats, helping villagers, settling newcomers and story events. High Morale grants **Cheer** in the Hollows: temporary buffs, extra revives, or the village's encouragement powering up the Kitchen Arts meter. The idea that people who know and care about Bram rally behind him survives the change of direction; what replaces "the stronghold" is the village. Morale stays separate from the tavern's Renown and from any one character's disposition (Section 2.7). **Flag:** with persistent relationships now central, a separate Morale value may overlap with the sum of the villagers' dispositions; whether Morale stays its own measure or is derived from the community's relationships is open (Section 13).
+**Morale and Cheer** *(v0.5, reinterpreted; to confirm)*. Morale is the state of the **village community** as a whole, driven by things like how well the village eats, helping villagers, settling newcomers and story events. High Morale grants **Cheer** in the Hollows: temporary buffs, extra revives, or the village's encouragement powering up the Kitchen Arts meter. The idea that people who know and care about Bram rally behind him survives the change of direction; what replaces "the stronghold" is the village. Morale stays separate from the tavern's Renown and from any one character's disposition (Section 2.7). **Flag:** with persistent relationships now central, a separate Morale value may overlap with the sum of the villagers' dispositions; whether Morale stays its own measure or is derived from the community's relationships is open (Section 13). *(2026-10-10, Phase 5a)* **Its story purpose:** Morale is the village's bond, and in Act IV that bond is what renews the seal through the keeper. It should therefore come from the community itself (residents settled, villagers' feelings, festivals, how well the village eats) rather than be a separate number to farm; how it's computed is decided in its milestone.
 
 **Defense events: dropped** *(v0.5)*. Monsters breaching the surface to attack the tavern, and any tower-defense or Stronghold-defense mode, are no longer part of the design. (The Bouncer minigame, Section 6.2, is a service moment and is unaffected.)
 
@@ -1160,6 +1171,21 @@ Two full games in one is ambitious, especially for a small team. Recommended gua
 26. **Customization rules for 4f** *(2026-10-05)*: the Section 13 Open 9 questions are settled for 4f in `docs/PLAN_4F.md` §22: whole-tile snapping for blocking furniture (quarter tiles for decor); explicit rotation modes including real quarter-turn rotation; per-piece flipping; area-wide floor and wall finishes with fixed structure; movable stations (the Grill wall-bound); owned copies; curios kept on extraction and lost on death, boss trophies never lost; palette-channel recolouring baked into textures; no stat bonuses in 4f. Decor's relationship effects and renaming canonical characters stay open.
 27. **Boog** *(2026-10-05; renamed 2026-10-06)*: the head cook, a goblin (he; drawn from Minifantasy's Goblin Sapper). Formerly Gunta Ashbelly, a dwarf, and before that Gundra Ashbelly; the stable id stays `gunta`.
 
+*Recorded 2026-10-10 (Phase 5a: the story revision; `docs/STORY.md`, signed off by the owner):*
+
+65. **The story's spine** *(the owner's choice)*: direction A, *The Old Party*, with A2 (`docs/STORY_5A_SPINE.md`). The source is a wound with a will, sealed by a structure Karias built around it and became; the Hollows are its seepage, local to the region. Acts I–IV as in Section 2.4, gated by depth and people, never a date.
+66. **The Warden Below is Karias**, become the seal's keeper over centuries alone; tragic, let go at the end. The final boss is the wound wearing [the betrayer].
+67. **The binding** and **Karias a half-elf**: the sealing was about 350 years ago; everyone sworn to the seal (Maximo, Gimp, Boog) stopped ageing while it holds and can't go far below without loosening it; it's why Maximo cannot go back. Renewing the seal through the village in Act IV lets them age again.
+68. **Gimp and Maximo**: the war's darkness got into Gimp and he turned on the party; Maximo handed him over and Gimp missed Karias's end (the grudge he admits); he blames Maximo for letting Karias go into the seal (the wound under it).
+69. **Bart is one of the Fortunate Five**, who came with them and stayed; Musashi doesn't name him because Bart asked. The fifth member is open.
+70. **Glimmer** is a fey spirit of Karias's wards, half-living in Ogrin since he was a newborn; in Act IV she anchors in **Phi's hammer** (found broken on a later floor in Act III) and Ogrin is freed (Decided 55's reserved "Dad" beat lands then). Ogrin's origin stays as locked.
+71. **Phi**: exiled from her homeland, a son there; [the betrayer] broke her hammer and the Warden holds her outside time; found in Act III. Her son comes to the Inn in Act II.
+72. **Grim is Kariaston's grower** and the garden's mentor.
+73. **Maximo's creed** is Kariaston's founding principle: *look to others as allies; do not judge a book by its cover; save as many as you can.*
+74. **Kaloren** is unconnected to the Fortunate Five; his secret is how the Hollows made him a lich, and the phylactery below.
+75. **The twelve v0.5 story conflicts** (Section 2.9) are resolved: no refugees on a wall, no fortification, no war footing; Ser Aldric, Sylvaris and Grukka arrive as people who stay; canonical late arrivals never take the three plots; the surface feels the Hollows only as personal strange events.
+76. **Morale's story purpose**: the village's bond, which renews the seal (Section 6.4); how it's computed is its milestone's.
+
 *Recorded 2026-10-06 (the owner's approval of the 4h plan and its canon):*
 
 64. **This is a community** *(4h Checkpoint D, 2026-10-07; approved 2026-10-08, with 4h)*: **Gimp's first meeting is in the keeper's bedroom** (the owner's revision): the first morning after a delve of the keeper's own, he climbs out of the hatch in the floor, as he has for years by an arrangement with Phi (up her hatch to see Boog and have a drink, back down), asks where she is, is irritated nobody told him she's gone, and goes back down; once per save. Afterwards he comes up to see Boog now and then (seeded, irregular, never two days running), by the stairs from the hatch. He **openly detests Maximo** and won't say why (open question, Section 13). The village's people talk among themselves in short overheard exchanges (a few pairs, once a day each, a quiet between any two); familiar villagers come to dinner (none to two an evening, as ordinary customers in their own looks); a small pale light hovers at Ogrin's window on some evenings, unexplained. Gimp's look: `soldier_headband` with a backpack; his portrait the Portrait Generator's elf with a red headband.
@@ -1265,22 +1291,16 @@ Two full games in one is ambitious, especially for a small team. Recommended gua
     - **Morale's purpose:** whether village Morale stays a separate measure or is derived from the villagers' relationships (Section 6.4);
     - where the old Night upgrade screen's functions and the pre-delve breakfast buff go in the new day (Section 3.1; decided when 4d step 5 is planned);
     - freshness tuning now that parts from the Hollows wait a day before service (Section 3.1);
-    - the story revision for Acts II–IV and the canonical cast (Section 2.9);
+    - ~~the story revision for Acts II–IV and the canonical cast (Section 2.9)~~ (done 2026-10-10, Decided 65–76);
     - whether people met or rescued in the Hollows can become Visitors (Section 3.3).
 12. **The new cast** *(2026-10-07; Section 2.10 has the detail)*:
-    - ~~when Kariaston got its name~~ (founded by Maximo, Decided 54); still open: how long ago the sealing was, and Maximo's age;
-    - Karias: an elf (the brief) or a half-elf (the campaign notes); the docs say elf;
-    - what Kaloren's secret is, given that liches are ordinary neighbours (recommended: how and where he became one, and the phylactery below), and who knows it;
-    - how Glimmer, a failed guardian of the seal, relates to the Warden Below;
-    - the reading of Glimmer's questline (a bond that heals Ogrin and restores her);
+    - ~~when Kariaston got its name; how long ago the sealing was, and Maximo's age; Karias elf or half-elf; Kaloren's secret; Glimmer and the Warden; Glimmer's questline~~ (answered 2026-10-10, Decided 65–76); still open: who else knows Kaloren's secret, and what's done with his phylactery;
     - names that sit close together: Bart and Bram (the keeper's default), Grim and Gimp, Orik and Ogrin;
     - ~~Gimp's kind~~ (half-elf, Decided 56);
     - firearms (Gimp loves rifles: recommended as rare personal property, never a player weapon; still open after 4h Checkpoint D, which shows him with a pack and no rifle);
-    - *(owner-proposed major story direction, 2026-10-07; **not locked**)* **why Gimp detests Maximo**, and whether Gimp was present beside Maximo and Karias at the original sealing. Undecided and not to be implied by any line: whether he took part, how old he truly is and how his apparent age relates to the ancient war, why he hates Maximo, whether Maximo knows he survived, whether the hostility hides a deeper bond, whether his longevity connects to Maximo's, and what he knows of Karias's sacrifice. 4h shows only the hostility (he won't hear the name, and won't say why);
-    - how Glimmer's failed guardianship relates to Maximo's sealing;
-    - why Maximo cannot return to the Hollows (a future story decision).
-    - *(2026-10-07, Musashi)* what Grim does for a living now that Musashi keeps the market;
-    - who the other two of the Fortunate Five were, and whether Orik ever travelled with them;
+    - ~~why Gimp detests Maximo; how Glimmer's failed guardianship relates to the sealing; why Maximo cannot return~~ (answered 2026-10-10, Decided 66–68, 70);
+    - ~~what Grim does for a living~~ (the grower, Decided 72);
+    - the fifth of the Fortunate Five, and whether Orik ever travelled with them; [the betrayer]'s and Phi's son's names; who gave Maximo the creed; Phi's choice at the end; the Fungal Warrens' and Ember Forge's bosses (`docs/STORY.md` §7);
     - Toshi: what took him below and what became of him (his quest's shape), and what cursed Musashi's taste (the same thing?);
     - names that sit close together: Musashi and Maximo.
 13. **Phase 5 and 4i** *(2026-10-08)*:
@@ -1303,7 +1323,7 @@ Two full games in one is ambitious, especially for a small team. Recommended gua
 - **Kitchen Arts:** the player's special meter attack *(deferred in the 4e plan)*.
 - **Cheer:** buffs during a delve, granted by the village's Morale *(v0.5; was stronghold morale)*.
 - **Renown:** the tavern's reputation, driving customer tiers and story.
-- **Morale:** the state of the village community; it produces Cheer *(v0.5, reinterpreted from the Sanctuary/Stronghold community; Section 6.4)*.
+- **Morale:** the state of the village community; it produces Cheer, and in Act IV its bond renews the seal *(v0.5, reinterpreted from the Sanctuary/Stronghold community; 2026-10-10; Section 6.4)*.
 - **Disposition:** what one named character or faction thinks of Bram (Section 2.7).
 - **Quest:** an objective that persists or matters beyond a single ordinary order, owned by Quest Machine.
 - **Recurring patron:** a named customer who returns and remembers.
@@ -1312,6 +1332,12 @@ Two full games in one is ambitious, especially for a small team. Recommended gua
 - **Promoted Visitor** *(v0.5)*: a Visitor saved as a persistent identity because they became relevant through the Inn or as a resident candidate.
 - **Resident** *(v0.5)*: a villager; a **recruited resident** is a former Visitor who settled in one of the empty plots (Section 6A.5).
 - **Hollower** *(2026-10-07)*: an authored person who lives in the Hollows and is not an enemy, such as Gimp or Glimmer (Section 2.10).
+- **The wound** *(2026-10-10)*: the source beneath the region, sealed by Karias (Section 2.1).
+- **The Warden Below** *(2026-10-10)*: Karias, become the seal's keeper (Section 2.1).
+- **The binding** *(2026-10-10)*: the seal's hold on those sworn to it, who stopped ageing (Section 2.1).
+- **The old party** *(2026-10-10)*: Maximo, Karias, Gimp, Boog and others who fought down to the wound.
+- **The Fortunate Five:** Phi, Grim, Musashi, Bart and a fifth, who delved about forty years ago (Section 2.10).
+- **Karias Remembrance Day** *(2026-10-10, proposed)*: the first festival (Phase 5b).
 - **Inn** *(v0.5)*: Tally Ho!'s guest rooms (Section 6.8).
 - **Preparation stage:** one step of a multi-stage dish (Section 5.4).
 - **Satchel / Lockbox:** carry inventory / the one slot kept on death.
@@ -1399,7 +1425,7 @@ Unity 6.3 LTS. UI Toolkit for menus and HUD, with uGUI only for world-space UI. 
 
 ## Appendix C: Superseded v0.4 Stronghold direction and day order
 
-Kept for reference (v0.5, 2026-10-04). None of this describes the current design. The story acts that depended on it are still in Section 2.4, awaiting revision (Section 2.9).
+Kept for reference (v0.5, 2026-10-04). None of this describes the current design. The story acts that depended on it were revised in Phase 5a (2026-10-10; Section 2.4) and the old text is kept below (C.5).
 
 ### C.1 Elevator pitch (v0.2)
 
@@ -1469,3 +1495,17 @@ The inn plays the role the cult plays in *Cult of the Lamb*. It grows across the
 ### C.4 Customization growing into the Stronghold (v0.4, Section 6.6)
 
 "**Growing with the home.** The same architecture later serves the Sanctuary and the Stronghold (Section 6.4): early game, personalize Tally Ho!; Act II, the inn grows into a Sanctuary with new areas and furnishing possibilities; Act III, the Stronghold's larger customizable spaces; Act IV, a home that visibly reflects everything the player survived and collected. No separate building system per stage."
+
+### C.5 Story arc (v0.1–v0.5, Section 2.4; superseded 2026-10-10 by the Phase 5a revision)
+
+> **(v0.5) Awaiting story revision.** The four acts below were written for the Sanctuary-to-Stronghold direction, which v0.5 drops. They are kept unchanged so no story material is silently lost, but Acts II–IV conflict with the village life-sim direction in places (refugees and a wall, a fortified Stronghold, a world war footing, "the whole stronghold rallies"). The conflicts are listed in Section 2.9; revising the acts is a story decision for the owner. Act I fits the new direction as written.
+
+The story unfolds in four acts, advanced by reaching new depths of the Hollows and by tavern milestones (renown, sanctuary capacity).
+
+**Act I — The Inn (Biomes 1–2).** Bram inherits Tally Ho! from a mentor who vanished in the Hollows. Business is slow. A wandering goblin cook teaches Bram that monster meat, prepared right, is delicious. The first customers are adventurers and curious villagers. Hooks: the mentor's disappearance, strange carvings on the walls of the Hollows.
+
+**Act II — The Sanctuary (Biomes 3–4).** Travelers bring news: other openings into the deep have appeared across Aldmere. Monsters raid nearby farms. Refugees begin arriving at the tavern looking for food and safety. Bram expands the inn into a sanctuary with rooms, a wall, and space for newcomers. Some refugees have skills and join the tavern's workforce. The player learns these openings all lead down into the Hollows, which run beneath the world.
+
+**Act III — The Stronghold (Biomes 5–6).** A neighboring kingdom falls. The tavern becomes one of the last safe places on the frontier. Soldiers, a disgraced knight, an elven scout and an orc warband arrive, uneasy allies. The tavern is fortified. Patrons now watch Bram's delves with hope; their morale becomes a mechanical force (see Section 6.4). Bram discovers what happened to his mentor.
+
+**Act IV — The Champion (Biome 7 and the Heart).** The source of what stirs in the Hollows is revealed at their deepest point beneath Kariaston. The whole stronghold rallies. A final descent culminates in a boss fight, with the people Bram fed and sheltered providing direct support. Post-game: endless/ascension mode and "legendary" ingredients.
