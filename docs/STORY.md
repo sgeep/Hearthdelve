@@ -24,7 +24,7 @@ The player learns this in pieces across three acts (§4 says when). Nobody in th
 
 **The binding.** The seal drew on everyone sworn to it: **Maximo, Gimp and Boog stopped ageing while it holds**, and none of them can go far below without loosening it. That is why Maximo cannot go back (Decided 54's "probably cannot"), why a human mayor has watched Kariaston for three centuries, and why "Boog will never die" is a village joke with a truth under it. Gimp is bound to a seal he wasn't allowed to help make (**Proposed**: the oath bound him though he was locked away; the bitterest part of his grudge).
 
-**The Warden Below.** Alone in the seal for centuries, Karias slowly went wrong. **The Warden Below** is what he became: a keeper who no longer remembers why, who shifts the Hollows to turn delvers back (the reason the underworld rearranges itself), takes trespassers for threats, and holds them. A fragment of the old Karias still reaches out through the deep to anyone who will listen.
+**The Warden Below.** **The Warden Below** is the small shrivel of Karias that's left in the seal (the owner, 2026-10-10): for centuries it has withstood constant pain and torture to keep the Hollows from leaking out again, and it has slowly gone wrong: a keeper who no longer remembers why, who shifts the Hollows to turn delvers back (the reason the underworld rearranges itself), takes trespassers for threats, and holds them. A fragment of the old Karias still reaches out through the deep to anyone who will listen.
 
 **Glimmer.** One of the fey spirits Karias wove into the seal's wards. She slipped out, damaged and forgetful, and the nearest living thing was a newborn beside two dead adults in the Hollows: **Ogrin**. She has been half-living in him since; she is why he grew ten years in two, and why he's ill (a boy's body carrying a spirit it wasn't made for). She is the "failed guardian" of her own half-memories.
 
@@ -32,11 +32,11 @@ The player learns this in pieces across three acts (§4 says when). Nobody in th
 
 **The Fortunate Five.** About forty years ago (**Proposed** timing), five delvers went down into what the sealing left behind: **Phi'rai**, **Grim**, **Musashi**, **Bart** and **Kresch**, a human fighter, very close to Grim, who has died since (the owner, 2026-10-10; how and where is open). They came back with more stories than they told. Phi and **Orik** rebuilt the wreck over the hatch into **Tally Ho!**; the Five split; Musashi lost his taste to something below, and his brother **Toshi** later went missing there; Bart stayed in Kariaston (Musashi doesn't name him among the Five because Bart asked him not to).
 
-**Phi.** A drow paladin, exiled from her homeland: she found a colleague of her parents performing rituals, tried to stop him with a group, and everyone with her died; he fled and she was blamed. She has a son at home she has never been able to return to. Her exile is why she was free to delve with the Five, and why she came back to Kariaston decades later as the closest thing she had to home.
+**Phi.** A drow paladin, exiled from her homeland: she found a colleague of her parents performing rituals, tried to stop him with a group, and everyone with her died; he fled and she was blamed. He was Karias's dark half in a drow's face, which she learns only in Act III. She has a son at home she has never been able to return to. Her exile is why she was free to delve with the Five, and why she came back to Kariaston decades later as the closest thing she had to home.
 
-**[The betrayer].** That drow (the campaign's Illyndor; **Open:** his name in the game is the owner's to give). The wound's whisper drew him across the world to the one place it can be reached. Phi recognised his work below (the Larder Troll was guarding something he'd left there: "whatever it was sitting on"), went after him twice, and the second time didn't come back.
+**Karias's dark half (the betrayer; the owner, 2026-10-10).** At the sealing the wound took the darker half of Karias, the part the war had darkened, and it got out. For centuries it has walked the world under other faces, never its own. Wearing a drow's face, it was the ritualist in Phi's homeland whose work got her exiled. The wound's whisper brought it back to the one place it can be reached; Phi recognised its work below (the Larder Troll was guarding something it had left: "whatever it was sitting on"), went after it twice, and the second time didn't come back. She doesn't know who it really is.
 
-**What happened to Phi (nine days before the keeper arrived).** She caught up with him deep in the Hollows; he broke her **hammer** and left her for dead. The Warden, taking her for one more trespasser threatening the seal, took her into a still place outside time and holds her there, alive and unchanged. She doesn't know how long she's been gone.
+**What happened to Phi (nine days before the keeper arrived).** She caught up with the dark half deep in the Hollows; it broke her **hammer** and left her for dead. The Warden, taking her for one more trespasser threatening the seal, took her into a still place outside time and holds her there, alive and unchanged. She doesn't know how long she's been gone.
 
 ## 3. Timeline (proposed)
 
@@ -47,7 +47,7 @@ The player learns this in pieces across three acts (§4 says when). Nobody in th
 | ~40 years ago | The Fortunate Five delve. Phi and Orik rebuild Tally Ho!. The Five split; Bart stays. |
 | Decades | Phi away; Orik keeps Tally Ho! open, then leaves when the Hollows grow too dangerous. Kaloren comes back up a lich (**Open:** when). |
 | ~8 years ago (**Proposed**) | Grim's last delve: he finds the infant Ogrin; Glimmer is in him. Grim stops delving to raise him. |
-| A few years ago | Phi comes home, takes Tally Ho! back, seeks out Orik. [The betrayer] arrives in the region, unseen. |
+| A few years ago | Phi comes home, takes Tally Ho! back, seeks out Orik. Karias's dark half comes back to the region under a face nobody knows. |
 | ~Weeks ago | Phi recognises his work under the Cellars; twice after the Larder Troll. |
 | 9 days before the game | Phi goes down "for a week at most". Her letter leaves Tally Ho! to the keeper. |
 
@@ -93,11 +93,11 @@ The keeper arrives, inherits Tally Ho! by Phi's letter, meets Boog and Orik, lea
 **Beats:**
 1. **Orik's kin.** The Drowned Halls are the hold Orik's family delved for three hundred years. He won't go down; he gives the keeper his grandmother's map and a name to look for. A quiet personal arc: what happened to them (**Proposed:** the water came; some lived; one is still below, a Hollower).
 2. **Phi's hammer (a later floor; the owner's call).** Deep in the Halls, broken in two on the floor of a fight nobody survived but her: **Phi's hammer**. A quest object, kept on extraction. Orik recognises it at once and says nothing for a long time. Brought home, it hangs in Tally Ho!.
-3. **The betrayer's trail.** Burned ward-stones, bodies, a note; he is going down, past the wards, toward the heart, and he's using the wound's whisper to do it. **Proposed:** a story night at Tally Ho!: restless spirits in the rooms after he breaks a ward (the campaign's ghost night, kept small and personal: the keeper and Orik and Boog hold the room; nobody's evening is ruined).
+3. **The dark half's trail.** Burned ward-stones, bodies, a note; it is going down, past the wards, toward the heart, and the wound's whisper is guiding it home. **Proposed:** a story night at Tally Ho!: restless spirits in the rooms after it breaks a ward (the campaign's ghost night, kept small and personal: the keeper and Orik and Boog hold the room; nobody's evening is ruined).
 4. **The Kraken** (Drowned Halls boss). **Peak.**
 5. **The Ember Forge.** A forge built into the seal's structure: Karias's work, unmistakable to anyone who knew him. Grukka arrives for its metal.
 6. **Phi, found (peak).** Past the Forge's boss, a still place outside time: Phi, alive, unchanged, sure it's been a week. The Warden is there as a presence, not a fight: it took her for a threat, and it speaks in phrases the keeper has heard Maximo quote ("like a wish come true"). The keeper brings her home. Her son is waiting at the Inn.
-7. **The truth about Karias.** The keeper brings the Warden's words to Maximo. He understands before the keeper finishes. The founder's reckoning: what he let Karias do, and why he can't go down to him.
+7. **The truth about Karias.** The keeper brings the Warden's words to Maximo. He understands before the keeper finishes. The founder's reckoning: what he let Karias do, and why he can't go down to him. Then the worse half of the truth: the thing below that Phi has hunted all her life wears no face of its own because it is the rest of Karias. Phi and Maximo learn they've been fighting the same man from either end.
 8. **Gimp and Maximo (peak).** Gimp's grudge in the open, both halves: the handing-over, and Karias. It doesn't resolve; it changes. (Their scene is the act's emotional centre; **Proposed:** in Tally Ho! at closing, the keeper the only other person there.)
 
 **Ember Forge boss:** **Open** (the GDD's "Dragon or Balrog"; a forge guardian of Karias's making fits).
@@ -106,20 +106,20 @@ The keeper arrives, inherits Tally Ho! by Phi's letter, meets Boog and Orik, lea
 
 **The village and Tally Ho!:** Phi back (where she lives: §5, Phi); Grukka's smithy; more rooms; the hammer on the wall; residents brought up from below.
 
-**What the player learns:** the Warden is Karias; the sealers are bound; the betrayer is heading for the wound; Gimp's and Maximo's history.
+**What the player learns:** the Warden is what's left of Karias, and Phi's enemy is the rest of him; the sealers are bound; the dark half is heading for the wound; Gimp's and Maximo's history.
 
 ### Act IV — The Heart (Biome 6, the Frostvault; Biome 7, the Rootdeep; the Heart)
 
-**Premise:** the betrayer is breaking Karias's structure to reach the wound, and the Warden is failing. The seal needs a new keeper, and the keeper finds there's another way to hold it.
+**Premise:** Karias's dark half is breaking his own structure to reach the wound, and the Warden is failing. The seal needs a new keeper, and the keeper finds there's another way to hold it.
 
 **Beats:**
 1. **The Frostvault: the first ward.** The coldest place below, where Karias wove the fey into the seal. Glimmer remembers what she was; she was meant to hold this ward and slipped her post. Kaloren's phylactery is here too (his questline meets the main road without joining it).
 2. **The fragment of Karias (peak).** Not a fight: the old Karias reaches the keeper through the Frostvault's ward, lucid for a moment, and tells them the seal doesn't have to take a life. It took his because he was alone.
 3. **Glimmer leaves Ogrin.** Glimmer can't go back into the seal, but she can't stay in Ogrin either; it's killing him slowly. The keeper brings **Phi's hammer**: Glimmer makes it her anchor. Ogrin is himself again, and starts to grow. **The reserved beat:** that night Ogrin calls Grim **Dad**.
-4. **The Rootdeep.** The underworld alive and pulsing; the betrayer's path torn through Karias's structure. The wound's whisper is loud here.
+4. **The Rootdeep.** The underworld alive and pulsing; the dark half's path torn through the structure it once helped build. The wound's whisper is loud here.
 5. **The village gathers (the finale's setup).** The keeper doesn't go down with an army. Instead the village does what it does: a feast at Tally Ho!, every friend and settler, Maximo's creed spoken as a toast. **Proposed mechanic link:** this is where Morale/Cheer pays off: the village's bond is literally what renews the seal (§7, Morale).
-6. **The Heart (the final peak).** The betrayer reaches the wound and takes its power, and it takes him (the campaign's Chalice scene, adapted: his own voice answered by another). The final boss is the wound wearing him (the GDD's Demon Lord art). Phi is there; whether she fights beside the keeper or only at the end is a beat to design with the fight. The Warden, Karias, holds the line one last time.
-7. **The seal renewed.** Not the old way: no one is lost in it. The binding passes from the old party and from Karias to the living village, through the keeper. Karias is let go.
+6. **The Heart (the final peak).** The dark half reaches the wound and joins it (the campaign's Chalice scene, adapted: its voice answered by another, beneath it). The final boss is Karias's dark half joined to the wound (the GDD's Demon Lord art). Phi is there; whether she fights beside the keeper or only at the end is a beat to design with the fight. The Warden, the shrivel of Karias, holds the line one last time.
+7. **The seal renewed.** Not the old way: no one is lost in it. The binding passes from the old party and from Karias to the living village, through the keeper. For a moment Karias is whole again, both halves, himself; then he is let go.
 8. **Afterwards.** The sealers begin to age again: Maximo goes below once, to the Frostvault, to say goodbye to Karias, then comes home to grow old; Gimp and Boog laugh about it. Phi is vindicated and decides what she does next (**Open**). The Hollows remain, quieter, still full of strange things, so the game goes on.
 
 **Post-game (Proposed):** the Hollows keep their biomes and delving continues (endless and legendary ingredients as the GDD has them); the village goes on growing; the calendar keeps turning.
@@ -145,7 +145,7 @@ The keeper arrives, inherits Tally Ho! by Phi's letter, meets Boog and Orik, lea
 | **Ser Aldric** | — | An Inn guest who wants to go below | Weapon training; a delver beside the keeper's legend | Stays, redeemed |
 | **Sylvaris** | — | Herbalist and scout; foraging | Brewing depth | Settled |
 | **Grukka** | — | — | The smith, for the Forge's metal | Forges what the finale needs |
-| **[The betrayer]** | Unseen; his work under the troll | Seen below | His trail; breaks a ward | Taken by the wound; the final boss |
+| **Karias's dark half** | Unseen; its work under the troll | Seen below, in a face that isn't its own | Its trail; breaks a ward; revealed as Karias | Joined to the wound; the final boss |
 | **Phi's son** | — | Arrives, waits at the Inn | His mother home | **Open:** home with her, or stays |
 
 **Notes on the cast:**
@@ -182,7 +182,7 @@ The keeper arrives, inherits Tally Ho! by Phi's letter, meets Boog and Orik, lea
 
 **Answered 2026-10-10 (after sign-off):** the fifth of the Five is Kresch (dead since, close to Grim); Maximo can't say who gave him the creed; Toshi is found having found Musashi's taste; Kaloren's phylactery comes from an endgame boss and he waits in the keeper's room that night; **firearms** are very rare but not unheard of, and Gimp or Boog may part with one as a weapon for the keeper at some point (a player weapon, when a milestone builds it).
 
-**Pending the owner's answer (2026-10-10): Karias as the betrayer.** The owner: *Karias is both the Warden and the betrayer; the Warden is the small shrivel of him that's left, who withstands constant pain and torture to keep the Hollows from leaking out again.* Everything below that names [the betrayer] as a separate drow is to be rewritten once the questions about Phi's past and the finale are answered.
+**Answered 2026-10-10: Karias is both the Warden and the betrayer.** The Warden is the small shrivel of him left in the seal, in constant pain, holding the Hollows in; the betrayer is his dark half, which the wound took at the sealing and which got out, and which (in a drow's face) got Phi exiled. The final boss is the dark half joined to the wound; renewing the seal lets Karias be whole for a moment before he is let go.
 
 ## 8. The story and Phase 5 (proposals for each milestone's own plan)
 
@@ -190,12 +190,12 @@ The keeper arrives, inherits Tally Ho! by Phi's letter, meets Boog and Orik, lea
 |---|---|
 | **5b** the calendar and the first festival | **Karias Remembrance Day** as the first festival (Maximo's speech and song, Gimp's absence, Glimmer at the name); Ogrin's "found day" as his birthday (Grim doesn't know his real one). Acts never wait on a date: a festival can deepen a beat, never gate one. |
 | **5c** Biome 2, the Fungal Warrens | Act II opens: the made walls, Glimmer's first words, a drow seen below. Its boss is Open. |
-| **5d** the Inn and Visitors | The Inn's first story guests: **Ser Aldric**, then **Phi's son**; [the betrayer] can pass through once as an ordinary Visitor before anyone knows him (**Proposed**). |
+| **5d** the Inn and Visitors | The Inn's first story guests: **Ser Aldric**, then **Phi's son**; Karias's dark half can pass through once as an ordinary Visitor, in a borrowed face, before anyone knows it (**Proposed**). |
 | **5e** fishing and foraging | **Sylvaris** arrives with foraging; the pond and the Warrens' herbs; Ogrin's good days at the bank. |
 | **5f** settling residents | The first plot settled in Act II; later, people brought up from below as candidates. Canonical arrivals never take the plots. |
 | **5g** seasons | Remembrance Day's season; the Frostvault's chill in winter's mood (no story gate on a season). |
 | **5h** property expansion, ranching, farming depth | **Grim the grower**; rooms for Phi and her son; the hammer's place on the wall; the property growing with the acts. |
-| **5i on** Biomes 3–7, Acts II–IV | Goblin Sprawl (Boog's past, the Goblin King), Drowned Halls (Orik's kin, Phi's hammer, the Kraken), Ember Forge (Karias's work, Phi found, Grukka), Frostvault (the first ward, Karias's fragment, Glimmer, Kaloren's phylactery), Rootdeep and the Heart (the betrayer, the finale). |
+| **5i on** Biomes 3–7, Acts II–IV | Goblin Sprawl (Boog's past, the Goblin King), Drowned Halls (Orik's kin, Phi's hammer, the Kraken), Ember Forge (Karias's work, Phi found, Grukka), Frostvault (the first ward, Karias's fragment, Glimmer, Kaloren's phylactery), Rootdeep and the Heart (Karias's dark half, the finale). |
 
 ## 9. Lines in the game to revisit (author's edits for later, never silent)
 
@@ -212,7 +212,7 @@ None of the built lines contradicts the spine; these are the ones that gain a me
 
 - **§2.1:** the founding kept word for word; add the binding (Maximo, Gimp, Boog), the structure Karias built and became, and the Hollows as local to the region (conflict 12).
 - **§2.4:** replaced by Acts I–IV from §4 above (in brief); the old Sanctuary/Stronghold acts moved to Appendix C.
-- **§2.5:** the Warden Below (Karias, become the seal's keeper); Sylvaris, Ser Aldric and Grukka as in §6; Phi's son and [the betrayer] added.
+- **§2.5:** the Warden Below (Karias, become the seal's keeper); Sylvaris, Ser Aldric and Grukka as in §6; Phi's son and Karias's dark half added.
 - **§2.9:** each conflict marked resolved, pointing to `docs/STORY.md`.
 - **§2.10:** Karias a half-elf; Grim the grower; Bart one of the Five ("came with the Five and stayed", replacing "the first Visitor who stayed"); Glimmer's questline (anchors in Phi's hammer; Ogrin freed, grows; the "Dad" beat); Gimp's history; Maximo's creed; Kaloren unconnected to the Five.
 - **§6.4 Morale:** its story purpose (the village's bond renews the seal); the open question narrowed to how it's computed.
